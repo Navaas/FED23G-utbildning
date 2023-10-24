@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript grundkurs</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #leftBox,
+    #rightBox {
+      height: 300px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: solid 2px black;
+    }
+  </style>
+  <body>
+    <h1>Grundkurs Javascript</h1>
+    <button onclick="favColor()">Vilken är din favoritfärg?</button>
+    <h1 id="heading">Changes Me!</h1>
+    <button onclick="changeHeading()">Ändra texten</button>
+    <div id="leftBox">
+      <h3 id="leftH3">No color yet</h3>
+    </div>
+    <button onclick="changedColor()">Ändra färg</button>
+    <div id="rightBox">
+      <h3 rightH3>No color yet</h3>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
