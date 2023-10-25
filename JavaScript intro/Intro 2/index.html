@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript intro del 2</title>
   </head>
+  <style>
+    .dark-mode {
+      /*Här bestäms vilken bakgrundsfärg samt textfärg till darkmode!*/
+      background-color: black;
+      color: #fff;
+    }
+  </style>
   <body>
     <h2>Grundkurs</h2>
+    <!--Här kommer 5 pop-up rutor med frågor-->
     <button onclick="clickedButton()">Klicka på mig</button>
+    <!--Här är knappen för calculator-->
     <button onclick="calculate()">Räkna med mig</button>
+    <!--Här ställs dark-mode in-->
+    <button onclick="toggleDarkMode()" class="">Light and Dark</button>
     <script src="script.js"></script>
   </body>
 </html>

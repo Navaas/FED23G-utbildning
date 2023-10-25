@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/* <speciific classes */
+.header {
+  padding: 0.5rem 1rem; /* Den första bestämmer uppe och nere, den adnra bestämmer sidorna*/
+  background-color: lightskyblue;
+}
+
+/* Utility classes */
+.m0 {
+  margin: 0;
+}
+.ph1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}

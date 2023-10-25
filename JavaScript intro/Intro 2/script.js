@@ -34,3 +34,20 @@ function calculate() {
     console.log(result);
   }
 }
+
+// En funktion som togglar till light and dark mode med hjälp av en knapp.
+function toggleDarkMode() {
+  //Exempel 1
+  if (
+    document.body.style.backgroundColor === "white" || // Om bakgrundsfärgen är vit, toggla den till svart.
+    document.body.style.backgroundColor === ""
+  ) {
+    (document.body.style.backgroundColor = "black"),
+      (document.body.style.color = "white"); // om bakgrundsfärgen är svart, toggla den till vit
+  } else {
+    (document.body.style.backgroundColor = "white"),
+      (document.body.style.color = "black");
+  }
+  //Exempel 2
+  //document.body.classList.toggle("dark-mode"); // Här tar du ut en class som ligger på elementet som har en css class istället.
+}
