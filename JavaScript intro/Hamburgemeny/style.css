@@ -37,6 +37,9 @@ a {
   text-decoration: none;
 }
 
+main {
+  padding: 10px;
+}
 @media (min-width: 850px) {
   .menuIcon {
     display: none;
