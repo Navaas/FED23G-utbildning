@@ -4,6 +4,7 @@ body {
 .menuIcon {
   color: white;
   font-size: 60px; /*Detta gör så iconen blir större*/
+  cursor: pointer;
 }
 nav {
   background-color: black;
@@ -21,6 +22,7 @@ nav {
   align-items: center;
   padding: 0;
   margin: 0;
+  display: none;
 }
 li {
   list-style: none;
@@ -54,7 +56,6 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-
     padding: 10px;
     height: 50px;
     text-align: center;

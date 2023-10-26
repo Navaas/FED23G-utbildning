@@ -1,10 +1,12 @@
+const hamburgerMenu = document.querySelector(".menu");
+
 function toggleMenu() {
-  const menu = document.querySelector(".menuIcon");
-  if (menu.classList.toggle === "block") {
-    menu.classList.toggle === "none";
-    console.log(menu);
+  if (hamburgerMenu.style.display === "none") {
+    hamburgerMenu.style.display = "block";
   } else {
-    menu.classList.toggle === "block";
+    hamburgerMenu.style.display = "none";
   }
 }
-toggleMenu();
+
+// Navbar syns inte efter man gått till mobile
+// Man måste klicka två gånger på iconen för att den ska synas
