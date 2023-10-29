@@ -48,17 +48,23 @@ function bathroom() {
 }
 
 function search() {
+  const takeStuff = document.getElementById("takeStuffFrom").value;
+  const saveFromTakeStuff = takeStuff;
+  takeStuff.innerText = saveFromTakeStuff;
   const stuffs = ["Tvål", "Tandborste", "Schampo", "Balsam", "Hudlotion"];
-  const make = prompt("Hämta en sak");
-  const makeIndex = stuffs.indexOf(make);
+  //const make = prompt("Hämta en sak");
+  const makeIndex = stuffs.indexOf(takeStuff);
+  const h4 = document.createElement("h4");
 
   //Gå igenom listan
   for (const stuff of stuffs) {
-    if (stuff === make) {
+    if (stuff === takeStuff) {
       console.log(stuff + " finns i ditt badrumsskåp");
       stuffs.splice(makeIndex, 1); // splice gör att den tar bprt objekt i arrayen
     }
   }
-  console.log(make + " finns inte i ditt badrumsskåp");
+  console.log(takeStuff + " finns inte i ditt badrumsskåp");
   console.log(stuffs);
+  h4.innerText = stuffs;
+  document.body.appendChild(h4);
 }
