@@ -20,11 +20,25 @@
         <div id="foodModal" class="foodListModal">
           <div class="modalContent">
             <span class="close" onclick="clickOnSpan()">&times;</span>
+            <h1>Detta finns i ditt kylskåp</h1>
+            <ul>
+              <li id="inFridge"></li>
+            </ul>
             <p>Skriv din matlista</p>
-            <input type="text" id="foodInputOne" />
-            <input type="text" id="foodInputTwo" />
-            <h2 id="listFood"></h2>
-            <button onclick="foodList()">Tom</button>
+            <form action="">
+              <input type="text" id="foodInputOne" class="clear" />
+              <input type="text" id="foodInputTwo" class="clear" />
+              <input type="text" id="foodInputThree" class="clear" />
+              <input type="text" id="foodInputFour" class="clear" />
+              <input type="text" id="foodInputFive" class="clear" />
+              <input type="text" id="foodInputSix" class="clear" />
+              <input type="reset" value="Rensa listan" />
+            </form>
+
+            <ul>
+              <li id="listFood"></li>
+            </ul>
+            <button onclick="foodList()">Lägg till</button>
           </div>
         </div>
       </section>

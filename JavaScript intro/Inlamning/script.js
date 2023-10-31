@@ -51,29 +51,29 @@ function search() {
   const takeStuff = document.getElementById("takeStuffFrom").value;
   const saveFromTakeStuff = takeStuff;
   takeStuff.innerText = saveFromTakeStuff;
-  const pickedStuff = ["Test"];
+  const pickedStuff = [];
 
   const stuffs = ["Tvål", "Tandborste", "Schampo", "Balsam", "Hudlotion"];
   //const make = prompt("Hämta en sak");
   const makeIndex = stuffs.indexOf(takeStuff);
   const h4 = document.createElement("h4");
+  const button = document.createElement("button");
 
   //Gå igenom listan
   for (const stuff of stuffs) {
     if (stuff === takeStuff) {
-      console.log(stuff + " finns i ditt badrumsskåp");
       stuffs.splice(makeIndex, 1);
       pickedStuff.push(stuff);
+      h4.innerText = "Du valde " + takeStuff + " Gå till duschen";
+      button.innerText = "Ta en dusch";
       console.log(pickedStuff);
-      h4.innerText = takeStuff + "Finns i skåpet"; // splice gör att dten tar bort objekt i arrayen
-    } else {
+      // splice gör att dten tar bort objekt i arrayen
     }
   }
-  console.log(takeStuff + " finns inte i ditt badrumsskåp");
   console.log(stuffs);
-  h4.innerText = takeStuff + "Finns inte skåpet";
 
   document.body.appendChild(h4);
+  document.body.appendChild(button);
 }
 
 // Här ligger script för köket (kitchen.html)
@@ -100,15 +100,34 @@ clickOutsideModal();
 */
 
 // Här är scriptet för matlistan
+const food = ["Gurka", "Sallad", "Mjöl", "Yoghurt", "Smör", "Ost"];
+const inFridge = document.getElementById("inFridge");
+inFridge.innerText = food;
 
 function foodList() {
-  const food = ["Gurka", "Sallad", "Mjöl", "Yoghurt", "Smör", "Ost"];
   const foodInputOne = document.getElementById("foodInputOne").value;
   const foodInputTwo = document.getElementById("foodInputTwo").value;
+  const foodInputThree = document.getElementById("foodInputThree").value;
+  const foodInputFour = document.getElementById("foodInputFour").value;
+  const foodInputFive = document.getElementById("foodInputFive").value;
+  const foodInputSix = document.getElementById("foodInputSix").value;
 
   const text1 = document.getElementById("listFood");
-  text1.innerText = foodInputOne + foodInputTwo;
-  food.push(foodInputOne, foodInputTwo);
+  text1.innerText =
+    foodInputOne +
+    foodInputTwo +
+    foodInputThree +
+    foodInputFour +
+    foodInputFive +
+    foodInputSix;
+  food.push(
+    foodInputOne,
+    foodInputTwo,
+    foodInputThree,
+    foodInputFour,
+    foodInputFive,
+    foodInputSix
+  );
 
   console.log(food, foodInputOne, foodInputTwo);
   console.table(food);
