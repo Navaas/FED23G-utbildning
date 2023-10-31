@@ -4,8 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="kitchen.css" />
   </head>
   <body>
-    <h1>Välkommen till köket</h1>
+    <main>
+      <h1>Välkommen till köket</h1>
+      <section>
+        <p>Starta kaffebryggaren</p>
+        <button>Kaffe</button>
+      </section>
+      <section>
+        <p>Skriv en matlista</p>
+        <button id#="btnModal" onclick="clickOnBtn()">Matlista</button>
+        <div id="foodModal" class="foodListModal">
+          <div class="modalContent">
+            <span class="close" onclick="clickOnSpan()">&times;</span>
+            <p>Skriv din matlista</p>
+            <input type="text" id="foodInputOne" />
+            <input type="text" id="foodInputTwo" />
+            <h2 id="listFood"></h2>
+            <button onclick="foodList()">Tom</button>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <a href="scene1.html"><button>Gå tillbaka</button></a>
+    </main>
   </body>
 </html>
