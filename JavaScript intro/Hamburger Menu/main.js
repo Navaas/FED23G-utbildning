@@ -20,7 +20,7 @@ function startClock() {
 function displayTime() {
   const date = new Date();
   const clockElement = document.getElementById("clock");
-  clockElement.textContent = date.toLocaleTimeString();
+  clockElement.textContent = date.toDateString();
 }
 
 function setupEventListeners() {
