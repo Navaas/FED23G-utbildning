@@ -1,0 +1,41 @@
+body {
+  background-image: url(images/bathroom.jpg);
+  height: 95vh;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.textTitle {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 50%;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 150px;
+}
+
+.item1 {
+  background-color: #fff;
+  width: 400px;
+  height: 300px;
+}
+
+.item2 {
+  background-color: #fff;
+  width: 400px;
+}
+
+ul {
+  list-style: none;
+}

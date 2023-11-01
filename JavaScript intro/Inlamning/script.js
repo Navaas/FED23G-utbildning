@@ -38,33 +38,33 @@ function stuffToBathroom() {
 
 function bathroom() {
   const stuffs = ["Tvål", "Tandborste", "Schampo", "Balsam", "Hudlotion"];
+  const bathroomList = document.getElementById("bathroomList");
   for (const stuff of stuffs) {
     console.log(stuff);
-    const h4 = document.createElement("h4");
 
-    h4.innerText = stuff;
-    document.body.appendChild(h4);
+    bathroomList.innerText = stuffs;
   }
 }
 
 function search() {
+  const stuffs = ["Tvål", "Tandborste", "Schampo", "Balsam", "Hudlotion"];
+  const pickedStuff = [];
   const takeStuff = document.getElementById("takeStuffFrom").value;
   const saveFromTakeStuff = takeStuff;
-  takeStuff.innerText = saveFromTakeStuff;
-  const pickedStuff = [];
 
-  const stuffs = ["Tvål", "Tandborste", "Schampo", "Balsam", "Hudlotion"];
-  //const make = prompt("Hämta en sak");
   const makeIndex = stuffs.indexOf(takeStuff);
-  const h4 = document.createElement("h4");
+  const showStuff = document.getElementById("showStuff");
+
   const button = document.createElement("button");
+  takeStuff.innerText = saveFromTakeStuff;
 
   //Gå igenom listan
   for (const stuff of stuffs) {
     if (stuff === takeStuff) {
       stuffs.splice(makeIndex, 1);
       pickedStuff.push(stuff);
-      h4.innerText = "Du valde " + takeStuff + " Gå till duschen";
+      showStuff.innerText = "Du valde " + takeStuff;
+      //h4.innerText = "Du valde " + takeStuff + " Gå till duschen";
       button.innerText = "Ta en dusch";
       console.log(pickedStuff);
       // splice gör att dten tar bort objekt i arrayen
@@ -72,7 +72,6 @@ function search() {
   }
   console.log(stuffs);
 
-  document.body.appendChild(h4);
   document.body.appendChild(button);
 }
 

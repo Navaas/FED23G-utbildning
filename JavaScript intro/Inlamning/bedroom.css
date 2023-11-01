@@ -1,0 +1,40 @@
+.container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  gap: 20px;
+}
+
+.box1 {
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/bathroom.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box2 {
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/kitchen.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  width: 150px;
+  padding: 20px;
+  border-radius: 10px;
+}

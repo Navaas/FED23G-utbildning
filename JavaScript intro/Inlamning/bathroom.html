@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="bathroom.css" />
   </head>
   <body>
-    <h1>Välkommen till badrummet!</h1>
-    <!--<h3>Ta en varm och härlig dusch</h3>
+    <main>
+      <div class="textTitle">
+        <a href="bedroom.html"><button>Tillbaka</button></a>
+        <h1>Välkommen till badrummet!</h1>
+      </div>
+
+      <!--<h3>Ta en varm och härlig dusch</h3>
     <h3>Ta med dig: Tvål, Schampo och Balsam</h3>
 
     <input type="text" placeholder="Sak 1" id="inputOne" />
@@ -20,11 +26,24 @@
     <h3 id="stuffOne"></h3>
     <h3 id="stuffTwo"></h3>
     <h3 id="stuffThree"></h3>!-->
-    <h1>Välj en sak från skåpet och ta ta sedan en dusch</h1>
-    <button onclick="bathroom()">Titta i skåpet</button>
-
-    <input type="text" placeholder="Sak 1" id="takeStuffFrom" />
-    <button onclick="search()">Välj en sak från listan</button>
-    <h3 id="takeStuffFrom"></h3>
+      <div class="container">
+        <div class="item1">
+          <h1>Vad finns i skåpet?</h1>
+          <button onclick="bathroom()">Öppna skåpet</button>
+          <ul>
+            <li id="bathroomList"></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="item2">
+          <h1>Ta en dusch</h1>
+          <h3>Hämta en sak från skåpet</h3>
+          <input type="text" placeholder="Sak 1" id="takeStuffFrom" />
+          <button onclick="search()">Välj en sak från listan</button>
+          <h3 id="showStuff"></h3>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
