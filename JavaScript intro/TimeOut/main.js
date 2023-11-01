@@ -6,17 +6,24 @@
 
 // Nu kommer den loopa tills man stänger om det
 //setInterval(printHello, 2000);
-function printHello() {
-  console.log("Hello world");
-}
+//function printHello() {
+//console.log("Hello world");
+//}
 
-let count = 0;
-while (count < 1_000_000_000) {
-  // Alla tre raderna med count är likadana
-  count += 1;
-  // count ++;
-  // count = count + 1;
-}
-console.log(count);
+//let count = 0;
+//while (count < 1_000_000_000) {
+// Alla tre raderna med count är likadana
+//count += 1;
+// count ++;
+// count = count + 1;
+//}
+//console.log(count);
 // console.time("count")
 // console.timeEnd("count") Får du ut hur lång tid det har att skriva ut svaret i consolen. Om man vill tima sin kod.
+
+setInterval(printDate, 1000);
+
+function printDate() {
+  const date = new Date();
+  console.log(date.toLocaleDateString());
+}

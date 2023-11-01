@@ -5,15 +5,22 @@ window.addEventListener("DOMContentLoaded", main);
  * allt som behövs för att börja */
 
 function main() {
-  printHelloWorld();
   setupEventListeners();
+  startClock();
 }
 /* Exempel på saker man skulle kunna göra när programmet startar*/
-// startClock ();
+
 // fetchInstagramFriends();
 
-function printHelloWorld() {
-  console.log("Hello World");
+function startClock() {
+  setInterval(displayTime, 1000);
+}
+
+// Nu visas det en klocka som tickar i headern
+function displayTime() {
+  const date = new Date();
+  const clockElement = document.getElementById("clock");
+  clockElement.textContent = date.toLocaleTimeString();
 }
 
 function setupEventListeners() {
