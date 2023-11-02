@@ -5,10 +5,13 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f7e9cc;
+  background-image: url("/images/cars3.jpg");
+  background-size: cover;
 }
 
 .innerContainer {
@@ -20,11 +23,14 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  inset: 0;
+  opacity: 0.4;
 }
 
 .item1,
 .item2,
 .item3 {
+  background-color: aqua;
   border: 1px solid red;
   width: 50%;
   text-align: center;
