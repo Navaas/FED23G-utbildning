@@ -16,7 +16,7 @@ const scenes = [
     text: "Oj, golvet gick sönder du står i källaren",
     button1: {
       text: "Ta trapporna",
-      nextSceneIndex: 0,
+      nextSceneIndex: 1,
     },
     button2: {
       text: "Ta hissen",
