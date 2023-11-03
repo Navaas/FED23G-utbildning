@@ -1,8 +1,9 @@
-/*Detta gör så att backgrundsbilden blir opacity men inte texten.*/
+/*Detta gör så att backgrundsbilden blir opacity men inte texten. */
+
 section {
   height: 100vh;
   display: grid;
-  place-items: center; /* Cdentrerar innehåll */
+  place-items: center; /* Centrerar innehåll */
   position: relative;
 }
 
@@ -20,8 +21,8 @@ h1 {
   isolation: isolate; /* Skapar ett nytt staplingsinnehåll*/
 }
 
-/* Bakgrund med vit box som är opacity med svart text
-
+/* Bakgrund med vit box som är opacity med svart text */
+/*
 .container {
   display: flex;
   justify-content: center;
@@ -61,8 +62,8 @@ h1 {
 */
 
 /* Bakgrund med  vit opacity box med vit box i med svart text*/
-/*
-.container {
+
+/* .container {
   display: flex;
   justify-content: center;
   align-items: center;
