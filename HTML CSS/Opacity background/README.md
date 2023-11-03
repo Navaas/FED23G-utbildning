@@ -6,9 +6,7 @@
 
 ---
 
-I denna mapp har jag skapat en bakgrundsbild med en opacity box med text. Det finns tre olika exempel.
-
-Se bilder nedan.
+In this folder I have created a background image with an opacity box with text. There are three different examples.
 
 ![Bild 1](images//opacity.jpg)
 
