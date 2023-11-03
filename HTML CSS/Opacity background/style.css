@@ -1,25 +1,24 @@
-/* Detta gör så att backgrundsbilden blir opacity men inte texten.
+/*Detta gör så att backgrundsbilden blir opacity men inte texten.*/
 section {
   height: 100vh;
   display: grid;
-  place-items: center;
+  place-items: center; /* Cdentrerar innehåll */
   position: relative;
 }
 
 section::before {
   background-image: url(background.jpg);
-  background-size: cover;
-  content: "";
+  background-size: cover; /* Ändrar storleken på bilden så den täcker hela behållaren */
+  content: ""; /* Innehållet är tomt, eller skriver det befintliga i tex h1*/
   position: absolute;
-  inset: 0;
-  opacity: 0.3;
+  inset: 0; /* Ställer in avståndet till det överordnande elementet*/
+  opacity: 0.3; /* Gör bakgrunden genomskinlig */
 }
 
 h1 {
   color: #000;
-  isolation: isolate;
+  isolation: isolate; /* Skapar ett nytt staplingsinnehåll*/
 }
-*/
 
 /* Bakgrund med vit box som är opacity med svart text
 
@@ -62,6 +61,7 @@ h1 {
 */
 
 /* Bakgrund med  vit opacity box med vit box i med svart text*/
+/*
 .container {
   display: flex;
   justify-content: center;
@@ -109,3 +109,4 @@ h1 {
   border-radius: 10px;
   padding: 10px;
 }
+*/
