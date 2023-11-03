@@ -5,6 +5,7 @@ const scenes = [
     text: "Hämta Bärgan och se vilka äventyr han har planerat idag. Glöm inte att tanka alinol.",
     button1: {
       text: "Tanka",
+      type: "iframe",
       nextSceneIndex: 1,
     },
     button2: {

@@ -9,6 +9,7 @@ function showScene() {
   const text = document.getElementById("text");
   const button1 = document.getElementById("button1");
   const button2 = document.getElementById("button2");
+  const video = document.querySelector("video");
 
   const scene = scenes[activeSceneIndex];
 
@@ -16,6 +17,11 @@ function showScene() {
   text.textContent = scene.text;
   button1.textContent = scene.button1.text;
   button2.textContent = scene.button2.text;
+  video.innerHTML = scene.type;
+
+  if (video === video) {
+    console.log("Se din film");
+  }
 
   // Gå vidare till andra scener med hjälp av knappar
   button1.onclick = function () {
