@@ -23,7 +23,6 @@ body {
   justify-content: space-around;
   align-items: center;
   inset: 0;
-  opacity: 0.4;
 }
 
 .innerContainer::before {
