@@ -17,11 +17,11 @@ function showScene() {
   text.textContent = scene.text;
   button1.textContent = scene.button1.text;
   button2.textContent = scene.button2.text;
-  video.innerHTML = scene.type;
 
-  if (video === video) {
-    console.log("Se din film");
-  }
+  // Skapa en loop so kollar om video är aktiverat i scenar.
+  //if (video === video) {
+  //console.log("Se din film");
+  //}
 
   // Gå vidare till andra scener med hjälp av knappar
   button1.onclick = function () {

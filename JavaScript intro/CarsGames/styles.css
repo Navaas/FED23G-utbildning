@@ -9,7 +9,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f7e9cc;
   background-image: url("/images/cars3.jpg");
   background-size: cover;
 }
@@ -25,6 +24,9 @@ body {
   align-items: center;
   inset: 0;
   opacity: 0.4;
+}
+
+.innerContainer::before {
 }
 
 .item1,
