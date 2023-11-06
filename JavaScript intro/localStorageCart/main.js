@@ -37,7 +37,7 @@ function createProductCard(product) {
   // Create card price
   const priceLabel = document.createElement("p"); // Skapar en p tagg
   priceLabel.className = "cardPrice";
-  priceLabel.textContent = product.price;
+  priceLabel.textContent = product.price + " kr";
 
   // Create a buy button
   const addToCartButton = document.createElement("button");
