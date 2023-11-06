@@ -1,6 +1,8 @@
 // När sidan startas så körs main funktionen.
 window.addEventListener("DOMContentLoaded", main);
 
+const cart = [];
+
 function main() {
   renderProducts();
 }
@@ -43,6 +45,12 @@ function createProductCard(product) {
   const addToCartButton = document.createElement("button");
   addToCartButton.className = "cardAddButton";
   addToCartButton.textContent = "Köp";
+  // Klick på köp knapparna, lägger till en ny produkt.
+  addToCartButton.onclick = function () {
+    cart.push(product);
+
+    renderCartCountBadge();
+  };
 
   // Construct card with it's children
   // Nu syns det i domen
@@ -52,4 +60,10 @@ function createProductCard(product) {
 
   // create/get vill du oftast returna
   return card;
+}
+
+// Hämtar längden du klickat på knapparna
+function renderCartCountBadge() {
+  const span = document.getElementById("cartCount");
+  span.textContent = cart.length;
 }

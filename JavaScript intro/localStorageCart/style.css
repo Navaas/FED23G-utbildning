@@ -6,6 +6,8 @@ header {
   background-color: lightblue;
   padding: 0 1rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
@@ -34,4 +36,14 @@ footer {
 
 .cardAddButton {
   padding: 10px;
+  width: 100px;
+}
+
+.cartCountBadge {
+  background-color: gainsboro;
+  border-radius: 100rem; /* Du år en helt rund prick */
+  width: 2rem;
+  height: 2rem;
+  display: grid; /* Allt blir centrerat */
+  place-items: center; /* Allt blir centrerat */
 }
