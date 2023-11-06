@@ -17,4 +17,9 @@ const products = [
     title: "General",
     price: 60,
   },
+  {
+    id: 4,
+    title: "Rödalacken",
+    price: 90,
+  },
 ];
