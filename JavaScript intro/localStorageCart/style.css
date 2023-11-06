@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: lightblue;
+  padding: 0 1rem;
+  display: flex;
+}
+
+main {
+  background-color: lightcoral;
+  padding: 0 1rem;
+}
+
+footer {
+  display: flex;
+  background-color: lightseagreen;
+  padding: 0 1rem;
+}
