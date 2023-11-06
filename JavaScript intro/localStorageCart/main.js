@@ -3,16 +3,16 @@ window.addEventListener("DOMContentLoaded", main);
 
 let cart = [];
 
+/** This is the start of the program. */
 function main() {
   loadCartFromLocalStorage();
   renderProducts();
   renderCartCountBadge();
 }
 
-function renderProducts() {
-  console.log(products); // "Poducts / data.js"  hittas för att den ligger i det globala scoopet i html filen.
-}
-
+/** Generates html elements from our data file
+ * of products and renders them to the screen.
+ */
 function renderProducts() {
   const main = document.querySelector("#productContainer");
   // Läs den såhär: För varje produkt i "products" (produktlistan)
@@ -27,6 +27,12 @@ function renderProducts() {
   }
 }
 
+/**
+ * Takes a product object and creates all needed html elements
+ * and styling and then returns it.
+ * @param {Product} product the products object to turn into html content
+ * @returns an html representation of the product objects.
+ */
 function createProductCard(product) {
   // Hämtar in en produkt
   // Skapar card container
@@ -64,12 +70,7 @@ function createProductCard(product) {
   return card;
 }
 
-// Hämtar längden du klickat på knapparna
-function renderCartCountBadge() {
-  const span = document.getElementById("cartCount");
-  span.textContent = cart.length;
-}
-
+/** Saves the global cart array to local storage */
 // Spara dina produkter till localStorage. Ropas in till knappen "Köp"
 function saveCartToLocalStorage() {
   // Sparar till en sträng från kundkorgen
@@ -77,10 +78,20 @@ function saveCartToLocalStorage() {
   // Spara till kundvagn
   localStorage.setItem("cart", cartString);
 }
-
+/** Loads the cart from local storage and
+ * saves it to the global vart array. */
 function loadCartFromLocalStorage() {
   if (localStorage.key("cart")) {
     const cartString = localStorage.getItem("cart");
     cart = JSON.parse(cartString);
   }
+}
+
+/** UUpdates the cart cound badge in the header
+ * based on haw many product that are in the cart.
+ */
+// Hämtar längden du klickat på knapparna
+function renderCartCountBadge() {
+  const span = document.getElementById("cartCount");
+  span.textContent = cart.length;
 }
