@@ -1,10 +1,12 @@
 // När sidan startas så körs main funktionen.
 window.addEventListener("DOMContentLoaded", main);
 
-const cart = [];
+let cart = [];
 
 function main() {
+  loadCartFromLocalStorage();
   renderProducts();
+  renderCartCountBadge();
 }
 
 function renderProducts() {
@@ -45,10 +47,10 @@ function createProductCard(product) {
   const addToCartButton = document.createElement("button");
   addToCartButton.className = "cardAddButton";
   addToCartButton.textContent = "Köp";
-  // Klick på köp knapparna, lägger till en ny produkt.
+  // Klick på köp knapparna, lägger till en ny produkt i cart listan.
   addToCartButton.onclick = function () {
     cart.push(product);
-
+    saveCartToLocalStorage();
     renderCartCountBadge();
   };
 
@@ -66,4 +68,19 @@ function createProductCard(product) {
 function renderCartCountBadge() {
   const span = document.getElementById("cartCount");
   span.textContent = cart.length;
+}
+
+// Spara dina produkter till localStorage. Ropas in till knappen "Köp"
+function saveCartToLocalStorage() {
+  // Sparar till en sträng från kundkorgen
+  const cartString = JSON.stringify(cart);
+  // Spara till kundvagn
+  localStorage.setItem("cart", cartString);
+}
+
+function loadCartFromLocalStorage() {
+  if (localStorage.key("cart")) {
+    const cartString = localStorage.getItem("cart");
+    cart = JSON.parse(cartString);
+  }
 }
