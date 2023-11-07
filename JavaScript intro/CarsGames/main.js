@@ -29,9 +29,6 @@ function showScene() {
     buttonArray.textContent = scene.buttonArray;
     buttonArray.classList.add("button");
     buttonArray.style.display = "block";
-    buttonArray.onclick = function () {
-      itemButton();
-    };
   } else {
     buttonArray.style.display = "none";
   }
@@ -55,7 +52,7 @@ function itemButton() {
   for (const item of items) {
     h2.innerText = item;
 
-    // console.log(item);
+    console.log(item);
   }
   h2.append(items);
 }
