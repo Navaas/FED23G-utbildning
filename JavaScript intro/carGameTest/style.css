@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: lightcyan;
+}
+
+.container {
+  background-color: aqua;
+  height: 400px;
+}
+
+.text {
+}
