@@ -11,7 +11,7 @@ const scenes = [
       text: "Hämta Bärgan",
       nextSceneIndex: 2,
     },
-    // backgroundImage: "url(/cars.jpg)",
+    // backgroundImage: "url(/cars2.jpg)",
   },
   {
     text: "Du tankar nu alinol",
@@ -23,7 +23,7 @@ const scenes = [
       text: "Till Bärgan",
       nextSceneIndex: 2,
     },
-    backgroundImage: "url(/cars2.jpg)",
+    // backgroundImage: "url(/cars2.jpg)",
   },
   {
     text: "Hej Bärgan! Jag är redo för dagens äventyr. Jag kan inte vänta! Är du full tankad? Kom igen, stå inte här och rosta, nu kör vi, lets go!",
