@@ -5,10 +5,11 @@ function main() {
 }
 
 function showScene() {
+  const scene = scenes[activeSceneIndex];
   // Hämta din html där du vill att din data ska hamna.
   const text = document.getElementById("text");
   const buttonContainer = document.getElementById("button-container");
-  const scene = scenes[activeSceneIndex];
+
   const buttonArray = document.getElementById("buttonArray");
   buttonArray.textContent = scene.buttonArray;
 
@@ -28,6 +29,9 @@ function showScene() {
     buttonArray.textContent = scene.buttonArray;
     buttonArray.classList.add("button");
     buttonArray.style.display = "block";
+    buttonArray.onclick = function () {
+      itemButton();
+    };
   } else {
     buttonArray.style.display = "none";
   }
@@ -46,10 +50,12 @@ function showScene() {
 }
 
 function itemButton() {
-  const item = ["Skiftnyckel", "Däck", "Motorolja", "Bultmaskin", "Papper"];
+  const items = ["Skiftnyckel", "Däck", "Motorolja", "Bultmaskin", "Papper"];
   const h2 = document.createElement("h2");
-  h2.textContent = item;
-  console.log(item);
-  h2.append(item);
-  return h2;
+  for (const item of items) {
+    h2.innerText = item;
+
+    // console.log(item);
+  }
+  h2.append(items);
 }

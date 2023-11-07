@@ -81,7 +81,7 @@ const scenes = [
   },
   {
     text: "Bärgan tar med Blixten till sin verkstad sedan försvinner han helt plötsligt. Sen kommer han tillbaka med hela flaket fullt med popcorn. Bärgan: Titta på mig jag har blivit en pop-car. Nu tittar vi på bio. Sen har jag en sista överraskning.",
-    buttonArray: "Detta är ett test",
+    buttonArray: "Titta i verkstaden",
     buttons: [
       {
         text: "Vad är det för överraskning?",
