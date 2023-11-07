@@ -37,6 +37,7 @@ body {
   text-align: center;
 }
 
-.video {
-  display: none;
+button {
+  background-color: blue;
+  width: 250px;
 }
