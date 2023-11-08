@@ -5,7 +5,7 @@ header {
 .container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   height: 100vh;
   background-image: url(cars.jpg);
   background-size: cover;
@@ -40,11 +40,10 @@ p {
 }
 
 .textContainer {
-  margin-top: 5vh;
   background-color: #2e3261;
   border: 4px dotted #ffe148;
-  width: 600px;
-  height: 300px;
+  width: 500px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
