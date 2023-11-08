@@ -62,6 +62,7 @@ const scenes = [
     },
   },
   {
+    id: 1,
     text: "Bärgan kommer tillbaka med hela flaket fullt med popcorn. Bärgan: Titta på mig jag har blivit en pop-car. Nu tittar vi på bio. Sen har jag en sista överraskning, men du måste ta med dig en blomma. Titta i verkstaden om du hittar någon.",
     video: "movie.mov",
     backgroundImage: "url(./images/cars1.jpg)",
@@ -75,7 +76,7 @@ const scenes = [
     },
   },
   {
-    text: "Oj, vad mycket bråte det han har. Kan du hitta en blomma? ",
+    text: "Oj, vad mycket bråte han har. Kan du hitta en blomma? ",
     backgroundImage: "url(./images/cars1.jpg)",
     items: [
       {
