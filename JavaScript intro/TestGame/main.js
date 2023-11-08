@@ -1,5 +1,13 @@
 window.addEventListener("DOMContentLoaded", main);
 
+const ytdl = require("ytdl-core");
+const fs = require("fs");
+
+const link = "https://www.youtube.com/watch?v=J4-7Kvhbthg";
+const filePath = "/blixtenMovie.mov";
+
+ytdl(link, { quality: "highest" }).pipe(fs.createWriteStream(filePath));
+
 function main() {
   showScene();
 }
