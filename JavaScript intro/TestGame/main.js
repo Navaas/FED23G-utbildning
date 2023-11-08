@@ -1,13 +1,5 @@
 window.addEventListener("DOMContentLoaded", main);
 
-const ytdl = require("ytdl-core");
-const fs = require("fs");
-
-const link = "https://www.youtube.com/watch?v=J4-7Kvhbthg";
-const filePath = "/blixtenMovie.mov";
-
-ytdl(link, { quality: "highest" }).pipe(fs.createWriteStream(filePath));
-
 function main() {
   showScene();
 }
@@ -19,10 +11,7 @@ function showScene() {
   // Den stora diven med bilder som bakgrund
   const container = document.createElement("div");
   container.className = "container";
-  // Inner container (den vita)
-  const innerContainer = document.createElement("div");
-  innerContainer.className = "innerContainer";
-  //   innerContainer.style.backgroundImage = scene.backgroundImage;
+  container.style.backgroundImage = scene.backgroundImage;
   // Container för text och knappar
   const textContainer = document.createElement("div");
   textContainer.className = "textContainer";
@@ -41,14 +30,19 @@ function showScene() {
   button2.textContent = scene.button2.text;
   button2.className = "buttons";
 
-  const items = ["Skruvmejsel", "Skiftnyckel", "Motorolja", "Däck"];
+  // Visa video
+  const video = document.createElement("video");
+  video.src = scene.video;
+
+  // Array med saker i Bärgans verkstad
+  const items = ["Skruvmejsel", "Skiftnyckel", "Motorolja", "Däck", "Blomma"];
   const itemh1 = document.createElement("h1");
   for (const item of items) {
     itemh1.textContent = items;
     console.log(items);
   }
 
-  if (activeSceneIndex === 5) {
+  if (activeSceneIndex === 6) {
     itemh1.textContent = items;
   } else {
     itemh1.textContent = items;
@@ -64,7 +58,11 @@ function showScene() {
   };
 
   // Funktion för att dölja knapp i scen 5 och 6
-  if (activeSceneIndex === 6 || activeSceneIndex === 5) {
+  if (
+    activeSceneIndex === 6 ||
+    activeSceneIndex === 5 ||
+    activeSceneIndex === 7
+  ) {
     button2.textContent = scene.button2.text;
     button2.className = "buttons";
     button2.style.display = "none";
@@ -74,16 +72,16 @@ function showScene() {
 
   // Här anropas allt för att det ska synas i dom:en
   main.append(container);
-  container.append(innerContainer);
-  innerContainer.append(textContainer);
+  container.append(textContainer);
   textContainer.append(text);
   textContainer.append(buttonContainer);
   textContainer.append(itemh1);
+  textContainer.append(video);
   buttonContainer.append(button1);
   buttonContainer.append(button2);
 }
 
-// Behöver förklaras
+// Behöver förklaras?
 function goToNextScene(sceneIndex) {
   const container = document.querySelector(".container");
   if (container.parentNode) {
