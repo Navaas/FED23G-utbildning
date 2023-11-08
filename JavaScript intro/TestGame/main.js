@@ -84,3 +84,5 @@ function goToNextScene(sceneIndex) {
   activeSceneIndex = sceneIndex;
   showScene();
 }
+
+// Göra imorgon: Lägga till item array i en ny scen. Testa att lägga på bilder istället för ord?

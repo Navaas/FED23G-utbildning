@@ -69,6 +69,9 @@ const scenes = [
       nextSceneIndex: 0,
     },
   },
+
+  // Det ska läggas till 1-2 scener till.. "Titta i Bärgans verkstad"
+
   {
     text: "När filmen är slut tar Bärgan med Blixten upp till Restaurangen ****. Där är fröken Sally vid ett bord. Bärgan: Ikväll är jag er kypare, vad önskas? Blixten: Bärgan har du fixat allt detta? Bärgan: Så sant som det är sagt, med lite hjälp av fröken Sally. Sally: Han är bra den där Bärgan. Blixten: Ja, han är min bästa vän!",
     button1: {
