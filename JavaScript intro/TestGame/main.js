@@ -33,22 +33,28 @@ function showScene() {
   // Visa video
   const video = document.createElement("video");
   video.src = scene.video;
+  video.controls = true;
 
+  // Item array
+  const itemsArray = document.createElement("h2");
+  itemsArray.textContent = scene.items;
+  console.log(scene);
   // Array med saker i Bärgans verkstad
-  const items = ["Skruvmejsel", "Skiftnyckel", "Motorolja", "Däck", "Blomma"];
-  const itemh1 = document.createElement("h1");
-  for (const item of items) {
-    itemh1.textContent = items;
-    console.log(items);
-  }
 
-  if (activeSceneIndex === 6) {
-    itemh1.textContent = items;
-  } else {
-    itemh1.textContent = items;
-    itemh1.style.display = "none";
-  }
+  //   for (const item of items) {
+  //     itemsArray.textContent = scene.items;
+  //     console.log(items);
+  //   }
 
+  //   if (activeSceneIndex === 6) {
+  //     itemh1.textContent = items;
+  //   } else {
+  //     itemh1.textContent = items;
+  //     itemh1.style.display = "none";
+  //   }
+  for (item of itemsArray) {
+    scene.items;
+  }
   // Funktioner för knapparna som ska byta scen
   button1.onclick = function () {
     goToNextScene(scene.button1.nextSceneIndex);
@@ -75,7 +81,7 @@ function showScene() {
   container.append(textContainer);
   textContainer.append(text);
   textContainer.append(buttonContainer);
-  textContainer.append(itemh1);
+  textContainer.append(itemsArray);
   textContainer.append(video);
   buttonContainer.append(button1);
   buttonContainer.append(button2);
