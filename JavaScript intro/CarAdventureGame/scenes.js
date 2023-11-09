@@ -58,5 +58,3 @@ const scenes = [
     ],
   },
 ];
-
-console.log(scenes);
