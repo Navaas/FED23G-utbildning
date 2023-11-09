@@ -1,9 +1,11 @@
 window.addEventListener("DOMContentLoaded", main);
 
+let savedItemsList = [];
+
 function main() {
   showScene();
-  renderItemList();
-  createItemCard();
+  loadItemListFromLocalStorage();
+  renderItemListCountBadge();
 }
 
 function showScene() {
@@ -118,6 +120,11 @@ function createItemCard(item) {
   const textButton = document.createElement("button");
   textButton.className = "cardAddButton";
   textButton.textContent = item.text;
+  textButton.onclick = function () {
+    savedItemsList.push(item);
+    saveItemToLocalStorage();
+    renderItemListCountBadge();
+  };
 
   // Skapa en bild
   const image = document.createElement("img");
@@ -131,4 +138,23 @@ function createItemCard(item) {
 
   // create/get vill du oftast returna
   return itemCard;
+}
+
+function saveItemToLocalStorage() {
+  const saveItems = JSON.stringify(savedItemsList);
+  localStorage.setItem("savedItemsList", saveItems);
+}
+
+function loadItemListFromLocalStorage() {
+  if (localStorage.key("savedItemsList")) {
+    const saveItems = localStorage.getItem("savedItemsList");
+    savedItemsList = JSON.parse(saveItems);
+  }
+}
+
+function renderItemListCountBadge() {
+  const main = document.querySelector("main");
+  const span = document.createElement("span");
+  span.textContent = savedItemsList.length;
+  main.append(span);
 }
