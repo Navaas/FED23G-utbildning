@@ -22,6 +22,17 @@ function showScene() {
   const containerVideo = document.createElement("div");
   containerVideo.className = "containerVideo";
 
+  const itemCard = document.createElement("div");
+  itemCard.className = "itemCard";
+
+  itemCard.innerHTML = "";
+  for (const item of scene.itemsList) {
+    const testText = document.createElement("p");
+    testText.textContent = item.item;
+    container.append(itemCard);
+    itemCard.append(testText);
+  }
+
   // Loopar
   containerTitle.innerHTML = "";
   for (const text of scene.titleText) {
@@ -30,6 +41,7 @@ function showScene() {
     container.append(containerTitle);
     containerTitle.append(titleElement);
   }
+  console.log(scenes);
 
   containerStoryText.innerHTML = "";
   for (const storyText of scene.storyText) {
