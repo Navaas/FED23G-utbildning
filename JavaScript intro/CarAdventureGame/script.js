@@ -16,6 +16,8 @@ function showScene() {
 
   const containerTitle = document.createElement("div");
   containerTitle.className = "containerTitle";
+  const innerContainer = document.createElement("div");
+  innerContainer.className = "innerContainer";
 
   const containerStoryText = document.createElement("p");
   containerStoryText.className = "containerStoryText";
@@ -29,22 +31,6 @@ function showScene() {
   const itemCard = document.createElement("div");
   itemCard.className = "itemCard";
 
-  // Item array
-  // itemCard.innerHTML = "";
-  // for (const item of scene.itemsList) {
-  //   const testText = document.createElement("p");
-  //   testText.textContent = item.item;
-  //   container.append(itemCard);
-  //   itemCard.append(testText);
-  // }
-
-  // for (const title of scene.itemsList) {
-  //   const textButton = document.createElement("button");
-  //   textButton.textContent = title.text;
-  //   container.append(itemCard);
-  //   itemCard.append(textButton);
-  // }
-
   // Loopar
   containerTitle.innerHTML = "";
   for (const text of scene.titleText) {
@@ -53,14 +39,14 @@ function showScene() {
     container.append(containerTitle);
     containerTitle.append(titleElement);
   }
-  console.log(scenes);
 
   containerStoryText.innerHTML = "";
   for (const storyText of scene.storyText) {
     const storyTextElement = document.createElement("p");
     storyTextElement.textContent = storyText.text;
     container.append(containerStoryText);
-    containerStoryText.append(storyTextElement);
+    containerStoryText.append(innerContainer);
+    innerContainer.append(storyTextElement);
   }
 
   containerVideo.innerHTML = "";
@@ -155,6 +141,7 @@ function loadItemListFromLocalStorage() {
 function renderItemListCountBadge() {
   const main = document.querySelector("main");
   const span = document.createElement("span");
+  // span.textContent = savedItemsList.length;
   span.textContent = savedItemsList.length;
   main.append(span);
 }

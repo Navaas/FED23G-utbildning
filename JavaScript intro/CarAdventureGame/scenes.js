@@ -2,6 +2,11 @@ let activeSceneIndex = 0;
 
 const scenes = [
   {
+    backgroundImage: [
+      {
+        backgroundImage: "url(.images/cars.jpg",
+      },
+    ],
     titleText: [
       {
         text: "Blixten och Bärgan på äventyr",
@@ -18,11 +23,7 @@ const scenes = [
         text: "Let's go, nu gör vi!",
       },
     ],
-    videos: [
-      {
-        video: "movie.mov",
-      },
-    ],
+    videos: [],
     buttons: [
       {
         text: "Börja spela",
@@ -38,7 +39,11 @@ const scenes = [
         text: "Det är nog bäst att åka och tanka först. Man vet aldrig vad Bärgan har för fuffens för sig bakom backspeglarna",
       },
     ],
-    videos: [],
+    videos: [
+      {
+        video: "movie.mov",
+      },
+    ],
     buttons: [
       {
         text: "Åk och tanka",
