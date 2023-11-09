@@ -17,11 +17,14 @@ function showScene() {
   const containerText = document.createElement("div");
   containerText.className = "containerText";
 
+  // Loopar
   containerText.innerHTML = "";
   for (const text of scene.texts) {
     const textElement = document.createElement("p");
     textElement.textContent = text.text;
     console.log(scene.texts);
+    container.append(containerText);
+    containerText.append(textElement);
   }
 
   containerButton.innerHTML = "";
@@ -29,15 +32,13 @@ function showScene() {
     const buttonElement = document.createElement("button");
     buttonElement.textContent = buttonData.text;
     console.log(buttonData.text);
+    container.append(containerButton);
+    containerText.append(buttonElement);
     buttonElement.onclick = function () {
       goToNextScene(buttonData.nextSceneIndex);
     };
 
     main.append(container);
-    container.append(containerText);
-    container.append(containerButton);
-    containerText.append(textElement);
-    containerText.append(buttonElement);
   }
 
   function goToNextScene(sceneIndex) {
