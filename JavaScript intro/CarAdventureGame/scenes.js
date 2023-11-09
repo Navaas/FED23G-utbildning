@@ -47,14 +47,17 @@ const scenes = [
     ],
     itemsList: [
       {
+        image: "./images/skiftnyckel.png",
         item: "Skruvmejsel",
         text: "Hämta",
       },
       {
+        image: "./images/skiftnyckel.png",
         item: "Motorolja",
         text: "Hämta",
       },
       {
+        image: "./images/skiftnyckel.png",
         item: "Blomma",
         text: "Hämta",
       },
