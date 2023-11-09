@@ -6,12 +6,6 @@ const scenes = [
       {
         text: "Blixten och Bärgan på äventyr",
       },
-      {
-        text: "Blixten och Bärgan på äventyr",
-      },
-      {
-        text: "Blixten och Bärgan på äventyr",
-      },
     ],
     storyText: [
       {
@@ -24,6 +18,11 @@ const scenes = [
         text: "Let's go, nu gör vi!",
       },
     ],
+    videos: [
+      {
+        video: "movie.mov",
+      },
+    ],
     buttons: [
       {
         text: "Börja spela",
@@ -32,16 +31,13 @@ const scenes = [
     ],
   },
   {
-    titleText: [
-      {
-        text: "Blixten och Bärgan på äventyr",
-      },
-    ],
+    titleText: [],
     storyText: [
       {
         text: "Det är nog bäst att åka och tanka först. Man vet aldrig vad Bärgan har för fuffens för sig bakom backspeglarna",
       },
     ],
+    videos: [],
     buttons: [
       {
         text: "Åk och tanka",

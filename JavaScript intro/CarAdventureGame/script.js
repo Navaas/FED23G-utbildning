@@ -19,10 +19,13 @@ function showScene() {
   const containerButton = document.createElement("div");
   containerButton.className = "containerButton";
 
+  const containerVideo = document.createElement("div");
+  containerVideo.className = "containerVideo";
+
   // Loopar
   containerTitle.innerHTML = "";
   for (const text of scene.titleText) {
-    const titleElement = document.createElement("p");
+    const titleElement = document.createElement("h1");
     titleElement.textContent = text.text;
     container.append(containerTitle);
     containerTitle.append(titleElement);
@@ -34,6 +37,15 @@ function showScene() {
     storyTextElement.textContent = storyText.text;
     container.append(containerStoryText);
     containerStoryText.append(storyTextElement);
+  }
+
+  containerVideo.innerHTML = "";
+  for (const video of scene.videos) {
+    const videoElement = document.createElement("video");
+    videoElement.src = video.video;
+    videoElement.controls = true;
+    containerStoryText.append(containerVideo);
+    containerVideo.append(videoElement);
   }
 
   containerButton.innerHTML = "";
