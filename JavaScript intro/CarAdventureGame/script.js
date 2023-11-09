@@ -119,7 +119,13 @@ function createItemCard(item) {
   textButton.className = "cardAddButton";
   textButton.textContent = item.text;
 
+  // Skapa en bild
+  const image = document.createElement("img");
+  image.src = item.image;
+  image.classList = "image";
+
   main.append(itemCard);
+  itemCard.append(image);
   itemCard.append(title);
   itemCard.append(textButton);
 
