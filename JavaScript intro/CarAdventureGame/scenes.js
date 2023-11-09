@@ -48,12 +48,15 @@ const scenes = [
     itemsList: [
       {
         item: "Skruvmejsel",
+        text: "Hämta",
       },
       {
         item: "Motorolja",
+        text: "Hämta",
       },
       {
         item: "Blomma",
+        text: "Hämta",
       },
     ],
   },

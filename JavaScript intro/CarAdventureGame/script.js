@@ -2,6 +2,8 @@ window.addEventListener("DOMContentLoaded", main);
 
 function main() {
   showScene();
+  renderItemList();
+  createItemCard();
 }
 
 function showScene() {
@@ -25,13 +27,21 @@ function showScene() {
   const itemCard = document.createElement("div");
   itemCard.className = "itemCard";
 
-  itemCard.innerHTML = "";
-  for (const item of scene.itemsList) {
-    const testText = document.createElement("p");
-    testText.textContent = item.item;
-    container.append(itemCard);
-    itemCard.append(testText);
-  }
+  // Item array
+  // itemCard.innerHTML = "";
+  // for (const item of scene.itemsList) {
+  //   const testText = document.createElement("p");
+  //   testText.textContent = item.item;
+  //   container.append(itemCard);
+  //   itemCard.append(testText);
+  // }
+
+  // for (const title of scene.itemsList) {
+  //   const textButton = document.createElement("button");
+  //   textButton.textContent = title.text;
+  //   container.append(itemCard);
+  //   itemCard.append(textButton);
+  // }
 
   // Loopar
   containerTitle.innerHTML = "";
@@ -81,4 +91,38 @@ function showScene() {
     activeSceneIndex = sceneIndex;
     showScene();
   }
+  renderItemList();
+}
+
+function renderItemList() {
+  const scene = scenes[activeSceneIndex];
+  const container = document.querySelector(".container");
+
+  for (const item of scene.itemsList) {
+    const itemCard = createItemCard(item);
+    container.append(itemCard);
+  }
+}
+
+function createItemCard(item) {
+  const main = document.querySelector("main");
+  const itemCard = document.createElement("div");
+  itemCard.className = "itemCard";
+  console.log(itemCard);
+  // Skapard card title
+  const title = document.createElement("h2");
+  title.textContent = item.item;
+  title.className = "cardTitle";
+
+  // Create a buy button
+  const textButton = document.createElement("button");
+  textButton.className = "cardAddButton";
+  textButton.textContent = item.text;
+
+  main.append(itemCard);
+  itemCard.append(title);
+  itemCard.append(textButton);
+
+  // create/get vill du oftast returna
+  return itemCard;
 }
