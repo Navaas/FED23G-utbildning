@@ -29,6 +29,7 @@ const scenes = [
         nextSceneIndex: 1,
       },
     ],
+    itemsList: [],
   },
   {
     titleText: [],
@@ -42,6 +43,17 @@ const scenes = [
       {
         text: "Åk och tanka",
         nextSceneIndex: 0,
+      },
+    ],
+    itemsList: [
+      {
+        item: "Skruvmejsel",
+      },
+      {
+        item: "Motorolja",
+      },
+      {
+        item: "Blomma",
       },
     ],
   },
