@@ -12,6 +12,10 @@
   background-color: lightcoral;
 }
 
+.containerVideo {
+  background-color: lightgray;
+}
+
 .containerButton {
   background-color: lightskyblue;
 }
