@@ -5,7 +5,7 @@ let savedItemsList = [];
 function main() {
   showScene();
   loadItemListFromLocalStorage();
-  renderItemListCountBadge();
+  // renderItemListCountBadge();
 }
 
 function showScene() {
@@ -19,7 +19,7 @@ function showScene() {
   const innerContainer = document.createElement("div");
   innerContainer.className = "innerContainer";
 
-  const containerStoryText = document.createElement("p");
+  const containerStoryText = document.createElement("div");
   containerStoryText.className = "containerStoryText";
 
   const containerButton = document.createElement("div");
@@ -85,10 +85,11 @@ function showScene() {
 function renderItemList() {
   const scene = scenes[activeSceneIndex];
   const container = document.querySelector(".container");
-
+  const containerStoryText = document.querySelector(".containerStoryText");
   for (const item of scene.itemsList) {
     const itemCard = createItemCard(item);
-    container.append(itemCard);
+    container.append(containerStoryText);
+    containerStoryText.append(itemCard);
   }
 }
 
@@ -118,6 +119,7 @@ function createItemCard(item) {
   image.classList = "image";
 
   main.append(itemCard);
+
   itemCard.append(image);
   itemCard.append(title);
   itemCard.append(textButton);

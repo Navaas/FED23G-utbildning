@@ -21,7 +21,7 @@
 }
 
 .containerStoryText {
-  background-color: lightcoral;
+  background-color: #1f1e2a;
   width: 150vh;
   border-radius: 20px;
   border: dotted 4px yellow;
@@ -38,4 +38,10 @@
 
 .image {
   width: 5%;
+}
+
+.text {
+  background-color: cadetblue;
+  height: 200px;
+  width: 200px;
 }
