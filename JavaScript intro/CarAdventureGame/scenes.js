@@ -7,6 +7,11 @@ const scenes = [
         text: "Blixten och Bärgan på äventyr",
       },
     ],
+    images: [
+      {
+        image: "./images/b&b.jpg",
+      },
+    ],
     storyText: [
       {
         text: "Välkommen till Kylarköping! ",
@@ -32,6 +37,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Bra att du tankar, man vet aldrig vad Bärgar har för fuffens bakom backspeglarna. Åk till Bärgans verkstad och se om han är vaken.",
@@ -48,6 +54,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "- Hallå Bärgan!",
@@ -76,6 +83,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Bärgan släpar med sig Blixten till en ödslig åker mitt ute i ingenstans. Blixten tittar sig omkring och ser bara rostiga traktorer som gäspar.",
@@ -105,6 +113,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Blixten ser lite fundersam ut och illa till mods. Han tycker ändå att traktorerna ser lite läskiga ut.",
@@ -140,6 +149,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Blixten och Bärgan åker tillbaka till åkern och leker kurragömma.",
@@ -162,6 +172,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "TTUUUUUUUUUT, Blixten tutade så högt att alla traktorerna välte omkull. Han tittar sig omkring och försöker hitta Bärgan. Plötsligt hör han att det prasslar i buskarna.",
@@ -187,6 +198,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Trötta efter Bärgans bravader så återvänder dom till Bärgans verkstad för att vila lite. Bärgan försvinner för att hjälpa Rödis att ställa upp Sten som har vält igen.",
@@ -208,12 +220,8 @@ const scenes = [
     itemsList: [],
   },
   {
-    backgroundImage: [
-      {
-        backgroundImage: "url(.images/cars.jpg",
-      },
-    ],
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Blixten titta sig omkring och blåser bort lite damm från arbetsbänken.",
@@ -252,6 +260,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Tut tut, Bärgan kommer tillbaka med hela flaket fullt med popcorn.",
@@ -287,6 +296,7 @@ const scenes = [
   },
   {
     titleText: [],
+    images: [],
     storyText: [
       {
         text: "Blixten och Bärgan åker till Flat's 8 Café, där står Sally vid ett bord och väntar på dom.",

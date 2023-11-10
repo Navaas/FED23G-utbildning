@@ -1,6 +1,5 @@
 .container {
-  background-color: #1f1e2a;
-  background-image: url(./images/cars.jpg);
+  background-image: url(./images/doc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 98vh;
@@ -15,7 +14,7 @@
 }
 
 .innerContainer {
-  background-color: #fff;
+  background-color: #1f1e2a;
   padding: 20px;
   border-radius: 10px;
 }
@@ -24,7 +23,7 @@
   background-color: #1f1e2a;
   width: 150vh;
   border-radius: 20px;
-  border: dotted 4px yellow;
+  border: dotted 4px #c89d05;
   padding: 20px;
 }
 
@@ -33,7 +32,7 @@
 }
 
 .containerButton {
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
 }
 
 .image {
@@ -44,4 +43,16 @@
   background-color: cadetblue;
   height: 200px;
   width: 200px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  margin: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.imageStartSide {
+  width: 30%;
+  height: 30%;
 }

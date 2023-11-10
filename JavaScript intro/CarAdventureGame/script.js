@@ -16,8 +16,12 @@ function showScene() {
 
   const containerTitle = document.createElement("div");
   containerTitle.className = "containerTitle";
+
   const innerContainer = document.createElement("div");
   innerContainer.className = "innerContainer";
+
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "imageContainer";
 
   const containerStoryText = document.createElement("div");
   containerStoryText.className = "containerStoryText";
@@ -38,6 +42,14 @@ function showScene() {
     titleElement.textContent = text.text;
     container.append(containerTitle);
     containerTitle.append(titleElement);
+  }
+
+  imageContainer.innerHTML = "";
+  for (const image of scene.images) {
+    const imageStory = document.createElement("img");
+    imageStory.src = image.image;
+    imageStory.classList = "imageStartSide";
+    innerContainer.append(imageStory);
   }
 
   containerStoryText.innerHTML = "";
@@ -66,7 +78,8 @@ function showScene() {
       goToNextScene(buttonText.nextSceneIndex);
     };
     container.append(containerButton);
-    containerButton.append(buttonElement);
+    containerButton.append(containerStoryText);
+    containerStoryText.appendChild(buttonElement);
   }
 
   main.append(container);
