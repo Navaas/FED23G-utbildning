@@ -46,33 +46,3 @@
 .imageStartSide {
   height: 50%;
 }
-
-.containerVideo {
-  background-color: lightgray;
-}
-
-.containerButton {
-  /* background-color: lightskyblue; */
-}
-
-.image {
-  width: 40%;
-}
-
-.text {
-  background-color: cadetblue;
-  height: 200px;
-  width: 200px;
-}
-
-p {
-  font-family: "Montserrat", sans-serif;
-  margin: 5px;
-  font-size: 16px;
-  color: #fff;
-}
-
-.imageStartSide {
-  width: 30%;
-  height: 30%;
-}

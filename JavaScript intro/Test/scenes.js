@@ -9,7 +9,7 @@ const scenes = [
     ],
     images: [
       {
-        image: "./images/b&b.jpg",
+        image: "./images/bargarn.jpg",
       },
     ],
     storyText: [

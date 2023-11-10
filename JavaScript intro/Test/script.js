@@ -3,12 +3,11 @@ window.addEventListener("DOMContentLoaded", main);
 let savedItemsList = [];
 
 function main() {
-  showScene();
+  showScen();
   loadItemListFromLocalStorage();
-  // renderItemListCountBadge();
 }
 
-function showScene() {
+function showScen() {
   const scene = scenes[activeSceneIndex];
   const main = document.querySelector("main");
 
@@ -33,17 +32,23 @@ function showScene() {
   const containerVideo = document.createElement("div");
   containerVideo.className = "containerVideo";
 
-  const itemCard = document.createElement("div");
-  itemCard.className = "itemCard";
-
   // Loopar
+  // Titel
   containerContent.innerHTML = "";
   for (const text of scene.titleText) {
     const titleElement = document.createElement("h1");
     titleElement.textContent = text.text;
-    container.append(titleElement);
+    titleElement.className = "titleElement";
+    containerInner.append(titleElement);
   }
-
+  // Story text
+  containerText.innerHTML = "";
+  for (const storyText of scene.storyText) {
+    const storyTextElement = document.createElement("p");
+    storyTextElement.textContent = storyText.text;
+    containerText.append(storyTextElement);
+  }
+  // Image
   containerImage.innerHTML = "";
   for (const image of scene.images) {
     const imageStory = document.createElement("img");
@@ -52,23 +57,7 @@ function showScene() {
     containerContent.append(containerImage);
     containerImage.append(imageStory);
   }
-
-  containerText.innerHTML = "";
-  for (const storyText of scene.storyText) {
-    const storyTextElement = document.createElement("p");
-    storyTextElement.textContent = storyText.text;
-    containerText.append(storyTextElement);
-  }
-
-  containerVideo.innerHTML = "";
-  for (const video of scene.videos) {
-    const videoElement = document.createElement("video");
-    videoElement.src = video.video;
-    videoElement.controls = true;
-    containerContent.append(containerVideo);
-    containerVideo.append(videoElement);
-  }
-
+  // Knappar
   containerButton.innerHTML = "";
   for (const buttonText of scene.buttons) {
     const buttonElement = document.createElement("button");
@@ -78,6 +67,15 @@ function showScene() {
     };
     containerInner.append(containerButton);
     containerButton.append(buttonElement);
+  }
+  // Video
+  containerVideo.innerHTML = "";
+  for (const video of scene.videos) {
+    const videoElement = document.createElement("video");
+    videoElement.src = video.video;
+    videoElement.controls = true;
+    containerContent.append(containerVideo);
+    containerVideo.append(videoElement);
   }
 
   main.append(container);
@@ -91,21 +89,12 @@ function showScene() {
       container.parentNode.removeChild(container);
     }
     activeSceneIndex = sceneIndex;
-    showScene();
+    showScen();
   }
-  renderItemList();
+  //   renderItemList();
 }
 
-function renderItemList() {
-  const scene = scenes[activeSceneIndex];
-  const container = document.querySelector(".container");
-  const containerContent = document.querySelector(".containerContent");
-  for (const item of scene.itemsList) {
-    const itemCard = createItemCard(item);
-    container.append(itemCard);
-    containerContent.append(itemCard);
-  }
-}
+console.log(scenes);
 
 function createItemCard(item) {
   const main = document.querySelector("main");
