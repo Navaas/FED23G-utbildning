@@ -9,10 +9,8 @@
 }
 
 .containerInner {
-  /* background-color: aquamarine; */
   width: 120vh;
   height: 40vh;
-  border: solid 2px black;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,10 +18,10 @@
 }
 
 .containerContent {
-  background-color: lightblue;
-  width: 100vh;
-  height: 30vh;
-  border: solid 2px black;
+  background: linear-gradient(90deg, rgb(70, 2, 2), rgb(230, 100, 100));
+  /* width: 100vh;
+  height: 30vh; */
+  border: 4px dotted #ffe148;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -37,6 +35,7 @@
 .containerButton {
   display: flex;
   align-items: flex-end;
+  background-color: #060c3d;
 }
 
 .containerImage {
@@ -51,8 +50,31 @@
   background-color: lightgray;
 }
 
-.containerButton {
-  /* background-color: lightskyblue; */
+button {
+  width: 250px;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Ger mer mellanrum mellan bokstäverna*/
+  border-radius: 40px;
+  padding: 20px 20px;
+  margin: 20px 30px;
+  background: linear-gradient(90deg, rgb(162, 1, 54), #e3dd2a);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+  border: 2px white dotted;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background: linear-gradient(90deg, #060c3d, #2b337a);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .image {
@@ -62,7 +84,6 @@
 .text {
   background-color: cadetblue;
   height: 200px;
-  width: 200px;
 }
 
 p {
@@ -73,6 +94,12 @@ p {
 }
 
 .imageStartSide {
-  width: 30%;
-  height: 30%;
+  width: 400px;
+  height: 240px;
+}
+
+.cardAddButton {
+  background-color: #ffe148;
+  width: 100px;
+  padding: 10px;
 }
