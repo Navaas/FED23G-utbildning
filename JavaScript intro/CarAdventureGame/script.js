@@ -75,6 +75,7 @@ function showScene() {
     buttonElement.textContent = buttonText.text;
     buttonElement.onclick = function () {
       goToNextScene(buttonText.nextSceneIndex);
+      animateButton();
     };
     containerInner.append(containerButton);
     containerButton.append(buttonElement);
@@ -93,6 +94,7 @@ function showScene() {
     activeSceneIndex = sceneIndex;
     showScene();
   }
+
   renderItemList();
 }
 
@@ -102,13 +104,13 @@ function renderItemList() {
   const containerContent = document.querySelector(".containerContent");
   for (const item of scene.itemsList) {
     const itemCard = createItemCard(item);
-    container.append(itemCard);
+    // container.append(item);
     containerContent.append(itemCard);
   }
 }
 
 function createItemCard(item) {
-  const main = document.querySelector("main");
+  // const main = document.querySelector("main");
   const itemCard = document.createElement("div");
   itemCard.className = "itemCard";
   console.log(itemCard);
@@ -131,8 +133,6 @@ function createItemCard(item) {
   const image = document.createElement("img");
   image.src = item.image;
   image.classList = "image";
-
-  main.append(itemCard);
 
   itemCard.append(image);
   itemCard.append(title);

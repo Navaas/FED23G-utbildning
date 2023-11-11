@@ -16,6 +16,7 @@ const scenes = [
       {
         text: "Välkommen till Kylarköping! ",
       },
+
       {
         text: "Blixten är hemma igen efter en lång resa i Tokyo. Bärgan har saknat sin bästa vän, därför har han planerat en fartfylld dag. ",
       },
