@@ -36,6 +36,9 @@ function showScene() {
   const itemCard = document.createElement("div");
   itemCard.className = "itemCard";
 
+  const containerCard = document.createElement("div");
+  containerCard.className = "containerCard";
+
   // Loopar
   containerContent.innerHTML = "";
   for (const text of scene.titleText) {
@@ -73,6 +76,7 @@ function showScene() {
   for (const buttonText of scene.buttons) {
     const buttonElement = document.createElement("button");
     buttonElement.textContent = buttonText.text;
+    buttonElement.className = "button";
     buttonElement.onclick = function () {
       goToNextScene(buttonText.nextSceneIndex);
     };
@@ -84,6 +88,7 @@ function showScene() {
   container.append(containerInner);
   containerInner.append(containerContent);
   containerContent.append(containerText);
+  containerInner.append(containerCard);
 
   function goToNextScene(sceneIndex) {
     const container = document.querySelector(".container");
@@ -99,17 +104,17 @@ function showScene() {
 
 function renderItemList() {
   const scene = scenes[activeSceneIndex];
-  const container = document.querySelector(".container");
-  const containerContent = document.querySelector(".containerContent");
+  const containerCard = document.querySelector(".containerCard");
+
   for (const item of scene.itemsList) {
     const itemCard = createItemCard(item);
     // container.append(item);
-    containerContent.append(itemCard);
+    containerCard.append(itemCard);
   }
 }
 
 function createItemCard(item) {
-  // const main = document.querySelector("main");
+  const containerInner = document.querySelector(".containerInner");
   const itemCard = document.createElement("div");
   itemCard.className = "itemCard";
   console.log(itemCard);
@@ -120,7 +125,7 @@ function createItemCard(item) {
 
   // Create a buy button
   const textButton = document.createElement("button");
-  textButton.className = "cardAddButton";
+  textButton.className = "buttonCard";
   textButton.textContent = item.text;
   textButton.onclick = function () {
     savedItemsList.push(item);
@@ -130,9 +135,10 @@ function createItemCard(item) {
 
   // Skapa en bild
   const image = document.createElement("img");
+  image.className = "imageCard";
   image.src = item.image;
-  image.classList = "image";
 
+  containerInner.append(itemCard);
   itemCard.append(image);
   itemCard.append(title);
   itemCard.append(textButton);
