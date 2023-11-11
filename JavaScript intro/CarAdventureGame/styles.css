@@ -101,6 +101,8 @@ p {
 }
 
 /* Style för korten i Bärgarns verkstad */
+
+/* Hela kortet */
 .containerCard {
   gap: 20px;
   width: 100vh;
@@ -109,10 +111,12 @@ p {
   justify-content: center;
 }
 
+/* Bild i kortet */
 .imageCard {
   width: 50%;
 }
 
+/* Knapp i kortet */
 .buttonCard {
   width: 100px;
 }
