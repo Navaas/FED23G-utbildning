@@ -19,8 +19,6 @@
 
 .containerContent {
   background: linear-gradient(90deg, rgb(70, 2, 2), rgb(230, 100, 100));
-  /* width: 100vh;
-  height: 30vh; */
   border: 4px dotted #ffe148;
   display: flex;
   flex-direction: row-reverse;
@@ -34,8 +32,7 @@
 
 .containerButton {
   display: flex;
-  align-items: flex-end;
-  background-color: #060c3d;
+  align-items: center;
 }
 
 .containerImage {
@@ -56,7 +53,7 @@ button {
   letter-spacing: 2px; /* Ger mer mellanrum mellan bokstäverna*/
   border-radius: 40px;
   padding: 20px 20px;
-  margin: 20px 30px;
+  margin: 40px 30px;
   background: linear-gradient(90deg, rgb(162, 1, 54), #e3dd2a);
   color: white;
   cursor: pointer;

@@ -75,7 +75,6 @@ function showScene() {
     buttonElement.textContent = buttonText.text;
     buttonElement.onclick = function () {
       goToNextScene(buttonText.nextSceneIndex);
-      animateButton();
     };
     containerInner.append(containerButton);
     containerButton.append(buttonElement);
