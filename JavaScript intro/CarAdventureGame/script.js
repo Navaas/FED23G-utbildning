@@ -107,17 +107,19 @@ function renderItemList() {
   const containerCard = document.querySelector(".containerCard");
 
   for (const item of scene.itemsList) {
-    const itemCard = createItemCard(item);
+    const card = createItemCard(item);
     // container.append(item);
-    containerCard.append(itemCard);
+    containerCard.append(card);
   }
 }
 
 function createItemCard(item) {
   const containerInner = document.querySelector(".containerInner");
-  const itemCard = document.createElement("div");
-  itemCard.className = "itemCard";
-  console.log(itemCard);
+
+  const card = document.createElement("div");
+  card.className = "card";
+  console.log(card);
+
   // Skapard card title
   const title = document.createElement("h2");
   title.textContent = item.item;
@@ -134,17 +136,17 @@ function createItemCard(item) {
   };
 
   // Skapa en bild
-  const image = document.createElement("img");
-  image.className = "imageCard";
-  image.src = item.image;
+  const cardImages = document.createElement("img");
+  cardImages.className = "cardImages";
+  cardImages.src = item.image;
 
-  containerInner.append(itemCard);
-  itemCard.append(image);
-  itemCard.append(title);
-  itemCard.append(textButton);
+  containerInner.append(card);
+  card.append(cardImages);
+  card.append(title);
+  card.append(textButton);
 
   // create/get vill du oftast returna
-  return itemCard;
+  return card;
 }
 
 function saveItemToLocalStorage() {
