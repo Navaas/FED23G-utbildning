@@ -11,6 +11,7 @@ function main() {
 function showScene() {
   const scene = scenes[activeSceneIndex];
   const main = document.querySelector("main");
+  main.innerHTML = "";
 
   const container = document.createElement("div");
   container.className = "container";
@@ -89,6 +90,7 @@ function showScene() {
   containerInner.append(containerContent);
   containerContent.append(containerText);
   containerInner.append(containerCard);
+  containerText.append(containerVideo);
 
   function goToNextScene(sceneIndex) {
     const container = document.querySelector(".container");
@@ -133,6 +135,13 @@ function createItemCard(item) {
     savedItemsList.push(item);
     saveItemToLocalStorage();
     renderItemListCountBadge();
+    const scene = scenes[activeSceneIndex];
+    itemsList = [];
+
+    scene.itemsList = scene.itemsList.filter(
+      (pickUpItem) => pickUpItem.item !== item.item
+    );
+    showScene();
   };
 
   // Skapa en bild
