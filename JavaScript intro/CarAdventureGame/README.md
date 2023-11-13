@@ -15,6 +15,8 @@
 - scenes.js: Detta är min "datafil" där alla scener är definierade
 - movie.mov: Ett filmklipp som visas i en av scenerna som ska visuallisera en biostund.
 
+- I scen 9 finns det ett "inventory" där användaren ska hämta en blomma. Detta är kopplat till localStorage.
+
 ## Övrigt
 
 - https://fontmeme.com/cars-font/ - För att skapa bilden som min titel har.
