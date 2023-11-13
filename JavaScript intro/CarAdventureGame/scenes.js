@@ -4,7 +4,7 @@ const scenes = [
   {
     titleText: [
       {
-        // text: "Blixten och Bärgan på äventyr",
+        image: "./images/titel.png",
       },
     ],
     images: [
