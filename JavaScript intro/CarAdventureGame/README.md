@@ -6,6 +6,8 @@
 
 ### Länk till min demo hittar du här:
 
+![Startsida](/images/readme.jpg)
+
 ## I projektet finns:
 
 - images: Mapp för alla bilder
@@ -16,6 +18,7 @@
 - movie.mov: Ett filmklipp som visas i en av scenerna som ska visuallisera en biostund.
 
 - I scen 9 finns det ett "inventory" där användaren ska hämta en blomma. Detta är kopplat till localStorage.
+  ![localStorage](/images/readme1.jpg)
 
 ## Övrigt
 
