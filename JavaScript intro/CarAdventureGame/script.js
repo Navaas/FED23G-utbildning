@@ -11,6 +11,7 @@ function main() {
 function showScene() {
   const scene = scenes[activeSceneIndex];
   const main = document.querySelector("main");
+  const header = document.querySelector("header");
   main.innerHTML = "";
 
   const container = document.createElement("div");
@@ -42,10 +43,12 @@ function showScene() {
 
   // Loopar
   containerContent.innerHTML = "";
-  for (const text of scene.titleText) {
-    const titleElement = document.createElement("h1");
-    titleElement.textContent = text.text;
-    container.append(titleElement);
+  for (const image of scene.titleText) {
+    const titleImage = document.createElement("img");
+    titleImage.classList = "titleImage";
+    titleImage.src = image.image;
+
+    header.append(titleImage);
   }
 
   containerImage.innerHTML = "";
