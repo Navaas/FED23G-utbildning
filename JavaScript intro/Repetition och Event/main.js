@@ -5,25 +5,25 @@ const query = "Pear";
 let fruits = ["Apple", "Pear", "Banana"];
 
 // Lösning 1 indexOF & splice
-// const indexToDelete = fruits.indexOf(query);
-// fruits.splice(indexToDelete, 1);
+ const indexToDelete = fruits.indexOf(query);
+ fruits.splice(indexToDelete, 1);
 
-// console.log(fruits);
+ console.log(fruits);
 
 // Lösning 2 - filter
-// fruits = fruits.filter((fruit) => fruit !== query);
-// console.log(fruits);
+ fruits = fruits.filter((fruit) => fruit !== query);
+ console.log(fruits);
 
-// Lösning 3 - for loop
-// Hittar den äpple läggs det till i den nya listan, hittar den päron gör den ingenting
+ // Lösning 3 - for loop
+ // Hittar den äpple läggs det till i den nya listan, hittar den päron gör den ingenting
 
-// const filteredFruits = [];
+ const filteredFruits = [];
 
-// for (const fruit of fruits) {
-//   if (fruit === query) {
-//     filteredFruits.push(fruit);
-//   }
-// }
+ for (const fruit of fruits) {
+   if (fruit === query) {
+     filteredFruits.push(fruit);
+   }
+ }
 
 // console.log(filteredFruits);
 

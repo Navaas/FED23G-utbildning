@@ -173,7 +173,6 @@ function loadItemListFromLocalStorage() {
 function renderItemListCountBadge() {
   const main = document.querySelector("main");
   const span = document.createElement("span");
-  // span.textContent = savedItemsList.length;
   span.textContent = savedItemsList.length;
   main.append(span);
 }
