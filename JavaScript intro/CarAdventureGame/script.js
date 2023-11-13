@@ -69,6 +69,8 @@ function showScene() {
     const videoElement = document.createElement("video");
     videoElement.src = video.video;
     videoElement.controls = true;
+    videoElement.width = 350;
+    videoElement.height = 210;
     containerContent.append(containerVideo);
     containerVideo.append(videoElement);
   }
@@ -123,7 +125,7 @@ function createItemCard(item) {
   console.log(card);
 
   // Skapard card title
-  const title = document.createElement("h2");
+  const title = document.createElement("p");
   title.textContent = item.item;
   title.className = "cardTitle";
 
