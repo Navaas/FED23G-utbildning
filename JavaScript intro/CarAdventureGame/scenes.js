@@ -1,6 +1,7 @@
 let activeSceneIndex = 0;
 
 const scenes = [
+  // Scen 1
   {
     titleText: [
       {
@@ -36,9 +37,14 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 2
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/Bargarn1.jpg",
+      },
+    ],
     storyText: [
       {
         text: "Bra att du tankar, man vet aldrig vad Bärgar har för fuffens bakom backspeglarna. Åk till Bärgans verkstad och se om han är vaken.",
@@ -53,9 +59,14 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 3
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/cars1.jpg",
+      },
+    ],
     storyText: [
       {
         text: "- Hallå Bärgan!",
@@ -82,9 +93,14 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 4
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/tippingTractor.jpg",
+      },
+    ],
     storyText: [
       {
         text: "Bärgan släpar med sig Blixten till en ödslig åker mitt ute i ingenstans. Blixten tittar sig omkring och ser bara rostiga traktorer som gäspar.",
@@ -112,9 +128,14 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 5
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/cars4.jpg",
+      },
+    ],
     storyText: [
       {
         text: "Blixten ser lite fundersam ut och illa till mods. Han tycker ändå att traktorerna ser lite läskiga ut.",
@@ -150,7 +171,11 @@ const scenes = [
   },
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/tractors.jpg",
+      },
+    ],
     storyText: [
       {
         text: "Blixten och Bärgan åker tillbaka till åkern och leker kurragömma.",
@@ -173,7 +198,11 @@ const scenes = [
   },
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/terry.jpg",
+      },
+    ],
     storyText: [
       {
         text: "TTUUUUUUUUUT, Blixten tutade så högt att alla traktorerna välte omkull. Han tittar sig omkring och försöker hitta Bärgan. Plötsligt hör han att det prasslar i buskarna.",
@@ -199,7 +228,11 @@ const scenes = [
   },
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/garage.png",
+      },
+    ],
     storyText: [
       {
         text: "Trötta efter Bärgans bravader så återvänder dom till Bärgans verkstad för att vila lite. Bärgan försvinner för att hjälpa Rödis att ställa upp Sten som har vält igen.",
@@ -248,12 +281,12 @@ const scenes = [
         text: "Hämta",
       },
       {
-        image: "./images/skiftnyckel.png",
+        image: "./images/flower.png",
         item: "Motorolja",
         text: "Hämta",
       },
       {
-        image: "./images/skiftnyckel.png",
+        image: "./images/motorolja.png",
         item: "Blomma",
         text: "Hämta",
       },
@@ -297,7 +330,11 @@ const scenes = [
   },
   {
     titleText: [],
-    images: [],
+    images: [
+      {
+        image: "./images/end.jpg",
+      },
+    ],
     storyText: [
       {
         text: "Blixten och Bärgan åker till Flat's 8 Café, där står Sally vid ett bord och väntar på dom.",
@@ -319,12 +356,7 @@ const scenes = [
       },
     ],
     videos: [],
-    buttons: [
-      {
-        text: "Spela igen?",
-        nextSceneIndex: 0,
-      },
-    ],
+    buttons: [],
     itemsList: [],
   },
 ];
