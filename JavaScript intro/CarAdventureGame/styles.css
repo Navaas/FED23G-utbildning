@@ -64,7 +64,7 @@
   transition-duration: 0.3s;
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform;
-  border: 2px white dotted;
+  border: 4px dotted #ffe148;
 }
 
 button:hover,
@@ -106,12 +106,13 @@ p {
 
 /* Hela kortet */
 .card {
-  background-color: antiquewhite;
-  border: 1px black solid;
+  background: linear-gradient(90deg, rgb(70, 2, 2), rgb(230, 100, 100));
+  border: 4px dotted #ffe148;
   border-radius: 10px;
   width: 200px;
   text-align: center;
   padding: 10px;
+  color: #fff;
 }
 
 /* Bild i kortet */
@@ -122,4 +123,12 @@ p {
 /* Knapp i kortet */
 .buttonCard {
   width: 100px;
+  background: linear-gradient(90deg, rgb(162, 1, 54), #e3dd2a);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px dotted #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
