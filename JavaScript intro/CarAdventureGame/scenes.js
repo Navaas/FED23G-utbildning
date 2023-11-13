@@ -169,6 +169,7 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 6
   {
     titleText: [],
     images: [
@@ -196,6 +197,7 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 7
   {
     titleText: [],
     images: [
@@ -226,6 +228,7 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 8
   {
     titleText: [],
     images: [
@@ -253,6 +256,7 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 9
   {
     titleText: [],
     images: [],
@@ -292,6 +296,7 @@ const scenes = [
       },
     ],
   },
+  // Scen 10
   {
     titleText: [],
     images: [],
@@ -328,6 +333,7 @@ const scenes = [
     ],
     itemsList: [],
   },
+  // Scen 11
   {
     titleText: [],
     images: [
