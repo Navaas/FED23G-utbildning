@@ -1,0 +1,62 @@
+* {
+  margin: 2px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hrHeader {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: lightgray solid 1px;
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  box-shadow: 5px 5px lightgray;
+  border-radius: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemText {
+  display: flex;
+  justify-content: center;
+  font-family: JuliusSansOne-Regular, "Times New Roman";
+}
+
+input {
+  width: 320px;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+  border: grey solid 1px;
+  margin: 10px;
+}
+
+textarea {
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 650px) {
+}

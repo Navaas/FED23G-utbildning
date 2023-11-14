@@ -1,0 +1,19 @@
+#navbar {
+  background-color: #5b6391;
+  padding: 20px;
+  color: white;
+}
+
+.navbarLi {
+  padding: 20px;
+}
+
+.navbarLi:hover {
+  color: aqua;
+}
+
+@media screen and (max-width: 990px) {
+  .navbarLi {
+    padding: 0px;
+  }
+}

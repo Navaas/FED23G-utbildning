@@ -1,0 +1,47 @@
+/* Flexbox style rules*/
+.flexboxContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: deepskyblue; /* Är skärmen större än 1000px kommer bakgrunden vara blå */
+}
+
+.flexItem {
+  border: solid purple 2px;
+}
+
+table,
+th,
+td {
+  border: solid blue 1px;
+  /* width: 300px; */
+}
+
+h1,
+h2 {
+  text-align: left;
+}
+
+/*Detta är en media query, när skärmen är under 800px kommer det skrivas över */
+
+/* Nu kommer bakgrunden gå från blå över 1000px, vid 1000px blir den gul, vid 800px kommer den bli mörkgrön */
+
+@media screen and (max-width: 1000px) {
+  .flexboxContainer {
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    /* align-items: center; */
+    background-color: lightyellow; /* Bakgrunden kommer att bli gul om skärmen är under 1000px*/
+  }
+
+  h1,
+  h2 {
+    color: darkcyan;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .flexboxContainer {
+    background-color: darkslategray; /* Bakgrunden kommer att bli gul om skärmen är under 1000px*/
+  }
+}

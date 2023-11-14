@@ -1,0 +1,114 @@
+* {
+  margin: 2px;
+}
+
+body {
+  font-size: 24px;
+  color: white;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexHeader {
+  background-color: #5070b5;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+nav {
+  font-size: 2rem;
+  background-color: plum;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+li {
+  width: 150px;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+nav ul li:hover {
+  background-color: #555;
+  color: white;
+}
+
+.flexMain {
+  display: flex;
+  flex: 1;
+}
+
+.flexNav {
+  background-color: #b95f21;
+  padding-top: 3rem;
+  flex: 1 1 5rem;
+}
+
+.flexArticle {
+  background-color: #81a43c;
+  flex: 3 3;
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.flexAside {
+  background-color: #b95f21;
+  padding-top: 3rem;
+  flex: 1 1 5rem;
+}
+
+.flexFooter {
+  background-color: #5070b5;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.item1 {
+  border: solid 3px black;
+  padding: 1rem;
+  width: 100%;
+}
+
+.item2 {
+  border: solid 3px black;
+  align-self: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+@media all and (max-width: 540px) {
+  .flexMain {
+    flex-direction: column;
+  }
+  .flexArticle {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .item1 {
+    padding: 0.5px;
+  }
+  .item2 {
+    padding: 0.5px;
+    align-self: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    text-align: center;
+  }
+}

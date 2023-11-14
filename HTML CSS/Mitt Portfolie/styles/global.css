@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Cinzel";
+  src: local("Cinzel"), url("/fonts/Cinzel-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand-Light";
+  src: local("Quicksand-Light"),
+    url("/fonts/Quicksand-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JuliusSansOne-Regular";
+  src: local("JuliusSansOne-Regular"),
+    url("/fonts/JuliusSansOne-Regular.ttf") format("truetype");
+}
+
+header {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px grey solid;
+}
+
+.imageLogo {
+  width: 30%;
+  display: flex;
+}
+
+.headerNavbar {
+  background-color: white;
+  display: flex;
+  justify-content: end;
+}
+
+nav {
+  background-color: white;
+  color: black;
+  padding-right: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+
+li {
+  color: black;
+  font-family: Cinzel, "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+nav ul li:hover {
+  color: #96b6c5;
+  text-decoration: underline;
+}
+
+img {
+  width: 5%;
+}
+
+h1 {
+  font-family: JuliusSansOne-Regular, "Times New Roman", Times, serif;
+}
+
+p {
+  font-family: Quicksand-Light, "Times New Roman", Times, serif;
+}
+
+button {
+  background-color: #96b6c5;
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: cinzel, "Times New Roman", Times, serif;
+}
+
+button:hover {
+  background-color: #adc4ce;
+}
+
+footer {
+  background-color: #adc4ce;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.itemFooterText {
+  color: white;
+}
+
+.itemFooterIcons {
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    height: 10vh;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .itemFooterText {
+    padding: 5px;
+  }
+  .itemFooterIcons {
+    padding-top: 20px;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  .imageLogo {
+    width: 15%;
+  }
+}

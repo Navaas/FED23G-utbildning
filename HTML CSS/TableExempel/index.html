@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Table exempel</title>
+  </head>
+  <body>
+    <!--Start av Flexbox container-->
+    <div class="flexboxContainer">
+      <div class="flexItem">
+        <h1>Skapa en tabell</h1>
+        <!--Start of table-->
+        <table>
+          <!-- Varje <tr> tagg symbooliserar en rad i tabellern -->
+          <tr>
+            <!-- <th> har en inbyggd bold/fetstil på texten -->
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            Text utanför th/td tag
+          </tr>
+          <tr>
+            <td>Michaela</td>
+            <td>Andreasson</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <td>lorem</td>
+            <td>Vivera von stefansdotter</td>
+          </tr>
+        </table>
+      </div>
+      <div class="flexItem">
+        <h1>Tabell med större celler</h1>
+        <table>
+          <!--Tabell med celler över flera rader och kolumner-->
+          <tr>
+            <!--Denna cell tar upp 2 stycken kolumner-->
+            <td colspan="2">Värde 1</td>
+            <td>Värde 2</td>
+            <td>Värde 3</td>
+          </tr>
+          <tr>
+            <td>Rad 2 värde 1</td>
+            <!--Denna cell tar upp 2 kolumner och två rader-->
+            <td colspan="2" rowspan="2">Rad 2 värde 2</td>
+            <td>Rad 2 värde 3</td>
+          </tr>
+          <tr>
+            <td>Final row 1</td>
+            <td>Final row 2</td>
+          </tr>
+          <tr>
+            <td>Final row 3</td>
+            <td>Final row 4</td>
+          </tr>
+        </table>
+      </div>
+      <div class="flexItem">
+        <h1>Formulär</h1>
+        <!-- Form-tag med input fält-->
+        <form action="" method="get" id="form">
+          <!--label och input är nu synkade ihop med hjälp av "strName"-->
+          <div>
+            <label for="strName">Skriv ditt namn här:</label>
+            <!--Required gör att du måste skicka med ett värde (visas för användaren), placeholder skriver en text i din input-->
+            <input
+              type="text"
+              name="strName"
+              id="strName"
+              required
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label for="intAge">Skriv ålder här:</label>
+            <input
+              type="number"
+              name="intAge"
+              id="intAge"
+              min="0"
+              max="100"
+              required
+              placeholder="30"
+            />
+          </div>
+
+          <div>
+            <input type="color" />
+          </div>
+
+          <!--Används tex om användaren ska boka taxi/hotell osv-->
+          <div>
+            <input type="datetime-local" />
+            1<input type="checkbox" /> 2<input type="checkbox" /> 3<input
+              type="checkbox"
+            />
+          </div>
+
+          <div>
+            <button type="submit">Skicka iväg data!</button>
+            <button>Hej</button>
+            <button>hej</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <!--JavaScript för att samla ihop data från de ifyllda inputfälten. Här syns namn och ålder i consolen-->
+  <script>
+    var from = document.getElementById("form");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var strName = document.getElementById("strName").value;
+
+      console.log(strName);
+
+      var intAge = document.getElementById("intAge").value;
+
+      console.log(intAge);
+    });
+  </script>
+</html>
