@@ -64,6 +64,7 @@ function showScene() {
   for (const storyText of scene.storyText) {
     const storyTextElement = document.createElement("p");
     storyTextElement.textContent = storyText.text;
+    containerContent.append(containerText);
     containerText.append(storyTextElement);
   }
 
@@ -93,19 +94,16 @@ function showScene() {
   main.append(container);
   container.append(containerInner);
   containerInner.append(containerContent);
-  containerContent.append(containerText);
   containerInner.append(containerCard);
-  containerVideo.append(containerVideo);
+}
 
-  function goToNextScene(sceneIndex) {
-    const container = document.querySelector(".container");
-    if (container.parentNode) {
-      container.parentNode.removeChild(container);
-    }
-    activeSceneIndex = sceneIndex;
-    showScene();
+function goToNextScene(sceneIndex) {
+  const container = document.querySelector(".container");
+  if (container.parentNode) {
+    container.parentNode.removeChild(container);
   }
-
+  activeSceneIndex = sceneIndex;
+  showScene();
   renderItemList();
 }
 
@@ -115,7 +113,6 @@ function renderItemList() {
 
   for (const item of scene.itemsList) {
     const card = createItemCard(item);
-    // container.append(item);
     containerCard.append(card);
   }
 }
