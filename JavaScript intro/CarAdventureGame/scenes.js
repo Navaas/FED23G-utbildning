@@ -22,10 +22,10 @@ const scenes = [
         text: "Blixten är hemma igen efter en lång resa i Tokyo. Bärgarn har saknat sin bästa vän, därför har han planerat en fartfylld dag. Häng med! ",
       },
       {
-        text: "Är du redo för?",
+        text: "Är du redo för äventyr?",
       },
       {
-        text: "Fyll tanken, du kör vi!",
+        text: "Fyll tanken, då kör vi!",
       },
     ],
     videos: [],
@@ -42,7 +42,7 @@ const scenes = [
     titleText: [],
     images: [
       {
-        image: "./images/Bargarn1.jpg",
+        image: "./images/tanka.jpeg",
       },
     ],
     storyText: [
