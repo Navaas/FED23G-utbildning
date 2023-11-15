@@ -95,7 +95,7 @@ function showScene() {
   containerInner.append(containerContent);
   containerContent.append(containerText);
   containerInner.append(containerCard);
-  containerText.append(containerVideo);
+  containerVideo.append(containerVideo);
 
   function goToNextScene(sceneIndex) {
     const container = document.querySelector(".container");
