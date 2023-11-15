@@ -1,0 +1,14 @@
+.slideshowContainer {
+  position: relative;
+}
+
+.slideshowContainer img {
+  width: 100%;
+  position: absolute; /*Nu ligger bilderna ovanpå varandra */
+  opacity: 0;
+  transition: opacity 400ms; /* Tonar in/ut bilden under 400ms*/
+}
+
+.slideshowContainer img.show {
+  opacity: 1;
+}
