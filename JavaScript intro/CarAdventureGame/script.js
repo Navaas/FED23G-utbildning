@@ -51,7 +51,7 @@ function showScene() {
   containerCard.className = "containerCard";
 
   // Här loopas alla arrayer med objekt från scener
-  for (const image of scene.titleText) {
+  for (const image of scene.titleTexts) {
     const titleImage = document.createElement("img");
     titleImage.classList = "titleImage";
     titleImage.src = image.image;
@@ -66,7 +66,7 @@ function showScene() {
     containerImage.append(imageStory);
   }
 
-  for (const storyText of scene.storyText) {
+  for (const storyText of scene.storyTexts) {
     const storyTextElement = document.createElement("p");
     storyTextElement.textContent = storyText.text;
     containerContent.append(containerText);
@@ -123,7 +123,7 @@ function renderItemList() {
   const scene = scenes[activeSceneIndex];
   const containerCard = document.querySelector(".containerCard");
 
-  for (const item of scene.itemsList) {
+  for (const item of scene.itemsLists) {
     const card = createItemCard(item);
     containerCard.append(card);
   }
@@ -151,9 +151,9 @@ function createItemCard(item) {
     saveItemToLocalStorage();
 
     const scene = scenes[activeSceneIndex];
-    itemsList = [];
+    itemsLists = [];
     // Här filtrerar array listan till en ny när du väljer saker i itemlist. Så försvinner saken du valt.
-    scene.itemsList = scene.itemsList.filter(
+    scene.itemsLists = scene.itemsLists.filter(
       (pickUpItem) => pickUpItem.item !== item.item
     );
     showScene();
