@@ -1,19 +1,28 @@
 window.addEventListener("DOMContentLoaded", main);
 
+// Den nya arrayen som sakerna sparas i från itemlist.
 let savedItemsList = [];
 
 function main() {
   showScene();
   loadItemListFromLocalStorage();
-  // renderItemListCountBadge();
 }
 
+/**
+ * This is a function how create html element and with for loops render out the scene with the content.
+ */
 function showScene() {
+  // Hämta in scenerna
   const scene = scenes[activeSceneIndex];
+
+  // Här hämtas in html element from intex.html
   const main = document.querySelector("main");
   const header = document.querySelector("header");
+
+  // Denna tömmer dina scener
   main.innerHTML = "";
 
+  // Här skapas alla html element
   const container = document.createElement("div");
   container.className = "container";
 
@@ -41,17 +50,14 @@ function showScene() {
   const containerCard = document.createElement("div");
   containerCard.className = "containerCard";
 
-  // Loopar
-  containerContent.innerHTML = "";
+  // Här loopas alla arrayer med objekt från scener
   for (const image of scene.titleText) {
     const titleImage = document.createElement("img");
     titleImage.classList = "titleImage";
     titleImage.src = image.image;
-
     header.append(titleImage);
   }
 
-  containerImage.innerHTML = "";
   for (const image of scene.images) {
     const imageStory = document.createElement("img");
     imageStory.src = image.image;
@@ -60,7 +66,6 @@ function showScene() {
     containerImage.append(imageStory);
   }
 
-  containerText.innerHTML = "";
   for (const storyText of scene.storyText) {
     const storyTextElement = document.createElement("p");
     storyTextElement.textContent = storyText.text;
@@ -68,7 +73,6 @@ function showScene() {
     containerText.append(storyTextElement);
   }
 
-  containerVideo.innerHTML = "";
   for (const video of scene.videos) {
     const videoElement = document.createElement("video");
     videoElement.src = video.video;
@@ -79,7 +83,6 @@ function showScene() {
     containerVideo.append(videoElement);
   }
 
-  containerButton.innerHTML = "";
   for (const buttonText of scene.buttons) {
     const buttonElement = document.createElement("button");
     buttonElement.textContent = buttonText.text;
@@ -91,12 +94,19 @@ function showScene() {
     containerButton.append(buttonElement);
   }
 
+  // Här skrivs det ut i dom:en
   main.append(container);
   container.append(containerInner);
   containerInner.append(containerContent);
   containerInner.append(containerCard);
+  // Hör körs funktionen för arr skriva ut itemlist
+  renderItemList();
 }
 
+/**
+ * This function render all the scenes, when you switch scenes.
+ * @param {string} sceneIndex
+ */
 function goToNextScene(sceneIndex) {
   const container = document.querySelector(".container");
   if (container.parentNode) {
@@ -104,9 +114,11 @@ function goToNextScene(sceneIndex) {
   }
   activeSceneIndex = sceneIndex;
   showScene();
-  renderItemList();
 }
 
+/**
+ * This function render the itemlist from scene with a for loop.
+ */
 function renderItemList() {
   const scene = scenes[activeSceneIndex];
   const containerCard = document.querySelector(".containerCard");
@@ -117,29 +129,30 @@ function renderItemList() {
   }
 }
 
+/** This function create the html and render the content from the array in scenes.js.
+ * And create a new array with the stuff you pickup, a filter function.
+ */
 function createItemCard(item) {
   const containerInner = document.querySelector(".containerInner");
-
   const card = document.createElement("div");
   card.className = "card";
-  console.log(card);
 
-  // Skapard card title
+  // Skapar card title
   const title = document.createElement("p");
   title.textContent = item.item;
   title.className = "cardTitle";
 
-  // Create a buy button
+  // Skapas "hämta" knappen
   const textButton = document.createElement("button");
   textButton.className = "buttonCard";
   textButton.textContent = item.text;
   textButton.onclick = function () {
     savedItemsList.push(item);
     saveItemToLocalStorage();
-    renderItemListCountBadge();
+
     const scene = scenes[activeSceneIndex];
     itemsList = [];
-
+    // Här filtrerar array listan till en ny när du väljer saker i itemlist. Så försvinner saken du valt.
     scene.itemsList = scene.itemsList.filter(
       (pickUpItem) => pickUpItem.item !== item.item
     );
@@ -156,25 +169,23 @@ function createItemCard(item) {
   card.append(title);
   card.append(textButton);
 
-  // create/get vill du oftast returna
   return card;
 }
 
+/**
+ * This function save the stuff you pick up from itemlist to localStorage.
+ */
 function saveItemToLocalStorage() {
   const saveItems = JSON.stringify(savedItemsList);
   localStorage.setItem("savedItemsList", saveItems);
 }
 
+/**
+ * Here can you see the saved stuff you pickup in localStorage
+ */
 function loadItemListFromLocalStorage() {
   if (localStorage.key("savedItemsList")) {
     const saveItems = localStorage.getItem("savedItemsList");
     savedItemsList = JSON.parse(saveItems);
   }
-}
-
-function renderItemListCountBadge() {
-  const main = document.querySelector("main");
-  const span = document.createElement("span");
-  span.textContent = savedItemsList.length;
-  main.append(span);
 }

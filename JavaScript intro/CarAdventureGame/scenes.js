@@ -1,5 +1,16 @@
 let activeSceneIndex = 0;
 
+/**
+ * @typedef {{ titleText: ImageObject[], images: ImageObject[], storyText: ImageObject[], video: ImageObject[], buttons[], itemList[] }} Scene
+ */
+
+/**
+ * @typedef {{ image: string }} ImageObject
+ */
+
+/**
+ * @type {Scene[]}
+ */
 const scenes = [
   // Scen 1
   {
