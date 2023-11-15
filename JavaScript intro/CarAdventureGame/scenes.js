@@ -1,7 +1,7 @@
 let activeSceneIndex = 0;
 
 /**
- * @typedef {{ titleText: ImageObject[], images: ImageObject[], storyText: ImageObject[], video: ImageObject[], buttons[], itemList[] }} Scene
+ * @typedef {{ titleTexts: ImageObject[], images: ImageObject[], storyTexts: ImageObject[], video: ImageObject[], buttons[], itemLists[] }} Scene
  */
 
 /**
@@ -14,7 +14,7 @@ let activeSceneIndex = 0;
 const scenes = [
   // Scen 1
   {
-    titleText: [
+    titleTexts: [
       {
         image: "./images/titel.png",
       },
@@ -24,7 +24,7 @@ const scenes = [
         image: "./images/b&b.jpg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "Välkommen till Kylarköping! ",
       },
@@ -46,17 +46,17 @@ const scenes = [
         nextSceneIndex: 1,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 2
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/tanka.jpeg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "Bra att du tankar, man vet aldrig vad Bärgar har för fuffens bakom backspeglarna. Åk till Bärgarns verkstad och se om han är vaken.",
       },
@@ -68,17 +68,17 @@ const scenes = [
         nextSceneIndex: 2,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 3
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/cars1.jpg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "- Hallå Bärgarn!",
       },
@@ -102,17 +102,17 @@ const scenes = [
         nextSceneIndex: 3,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 4
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/tippingTractor.jpg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "Bärgarn släpar med sig Blixten till en ödslig åker mitt ute i ingenstans. Blixten tittar sig omkring och ser bara rostiga traktorer som gäspar.",
       },
@@ -137,17 +137,17 @@ const scenes = [
         nextSceneIndex: 6,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 5
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/cars4.jpg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "Blixten ser lite fundersam ut och illa till mods. Han tycker ändå att traktorerna ser lite läskiga ut.",
       },
@@ -178,17 +178,17 @@ const scenes = [
         nextSceneIndex: 7,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 6
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/tractors.jpg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "Blixten och Bärgarn åker tillbaka till åkern och leker kurragömma.",
       },
@@ -206,17 +206,17 @@ const scenes = [
         nextSceneIndex: 6,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 7
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/terry.jpg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "TTUUUUUUUUUT, Blixten tutade så högt att alla traktorerna välte omkull. Han tittar sig omkring och försöker hitta Bärgarn. Plötsligt hör han att det prasslar i buskarna.",
       },
@@ -237,17 +237,17 @@ const scenes = [
         nextSceneIndex: 7,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 8
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/garage.png",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "Trötta efter Bärgarns bravader så återvänder dom till Bärgarns verkstad för att vila lite. Bärgarn försvinner för att hjälpa Rödis att ställa upp Sten som har vält igen.",
       },
@@ -265,13 +265,13 @@ const scenes = [
         nextSceneIndex: 8,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 9
   {
-    titleText: [],
+    titleTexts: [],
     images: [],
-    storyText: [
+    storyTexts: [
       {
         text: "Blixten titta sig omkring och blåser bort lite damm från arbetsbänken.",
       },
@@ -289,7 +289,7 @@ const scenes = [
         nextSceneIndex: 9,
       },
     ],
-    itemsList: [
+    itemsLists: [
       {
         image: "./images/skiftnyckel.png",
         item: "Skruvmejsel",
@@ -309,9 +309,9 @@ const scenes = [
   },
   // Scen 10
   {
-    titleText: [],
+    titleTexts: [],
     images: [],
-    storyText: [
+    storyTexts: [
       {
         text: "Tut tut, Bärgarn kommer tillbaka med hela flaket fullt med popcorn.",
       },
@@ -342,17 +342,17 @@ const scenes = [
         nextSceneIndex: 10,
       },
     ],
-    itemsList: [],
+    itemsLists: [],
   },
   // Scen 11
   {
-    titleText: [],
+    titleTexts: [],
     images: [
       {
         image: "./images/end.jpg",
       },
     ],
-    storyText: [
+    storyTexts: [
       {
         text: "Blixten och Bärgarn åker till Flat's 8 Café, där står Sally vid ett bord och väntar.",
       },
@@ -374,6 +374,6 @@ const scenes = [
     ],
     videos: [],
     buttons: [],
-    itemsList: [],
+    itemsLists: [],
   },
 ];
