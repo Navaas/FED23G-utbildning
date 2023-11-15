@@ -131,6 +131,7 @@ function renderItemList() {
 
 /** This function create the html and render the content from the array in scenes.js.
  * And create a new array with the stuff you pickup, a filter function.
+ * @param {string} item
  */
 function createItemCard(item) {
   const containerInner = document.querySelector(".containerInner");
