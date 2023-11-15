@@ -19,7 +19,7 @@ const scenes = [
       },
 
       {
-        text: "Blixten är hemma igen efter en lång resa i Tokyo. Bärgan har saknat sin bästa vän, därför har han planerat en fartfylld dag. ",
+        text: "Blixten är hemma igen efter en lång resa i Tokyo. Bärgarn har saknat sin bästa vän, därför har han planerat en fartfylld dag. Häng med! ",
       },
       {
         text: "Är du redo för?",
@@ -47,13 +47,13 @@ const scenes = [
     ],
     storyText: [
       {
-        text: "Bra att du tankar, man vet aldrig vad Bärgar har för fuffens bakom backspeglarna. Åk till Bärgans verkstad och se om han är vaken.",
+        text: "Bra att du tankar, man vet aldrig vad Bärgar har för fuffens bakom backspeglarna. Åk till Bärgarns verkstad och se om han är vaken.",
       },
     ],
     videos: [],
     buttons: [
       {
-        text: "Åk till Bärgan",
+        text: "Åk till Bärgarn",
         nextSceneIndex: 2,
       },
     ],
@@ -69,7 +69,7 @@ const scenes = [
     ],
     storyText: [
       {
-        text: "- Hallå Bärgan!",
+        text: "- Hallå Bärgarn!",
       },
       {
         text: "- Jag är redo för dagens äventyr, jag har tanken full med Allinol. Stå inte där och rosta, nu kör vi, lets go!",
@@ -78,7 +78,7 @@ const scenes = [
         text: "- Så sant som det är sagt. Men håll utkik efter vackra blommor på vägen.",
       },
       {
-        text: "- Men Bärgan vad ska jag ha blommor till?",
+        text: "- Men Bärgarn vad ska jag ha blommor till?",
       },
       {
         text: "- Det är en hemlis, men kom så åker vi.",
@@ -103,7 +103,7 @@ const scenes = [
     ],
     storyText: [
       {
-        text: "Bärgan släpar med sig Blixten till en ödslig åker mitt ute i ingenstans. Blixten tittar sig omkring och ser bara rostiga traktorer som gäspar.",
+        text: "Bärgarn släpar med sig Blixten till en ödslig åker mitt ute i ingenstans. Blixten tittar sig omkring och ser bara rostiga traktorer som gäspar.",
       },
       {
         text: "- Men vad är det här för roligt? Det är bara sömniga traktorer här.",
@@ -141,7 +141,7 @@ const scenes = [
         text: "Blixten ser lite fundersam ut och illa till mods. Han tycker ändå att traktorerna ser lite läskiga ut.",
       },
       {
-        text: "- Bärgan, jag tror att Luigi och Guido glömde en hjulbult till mitt däckt. Jag måste nog lösa det innan vi åker vidare.",
+        text: "- Bärgarn, jag tror att Luigi och Guido glömde en hjulbult till mitt däckt. Jag måste nog lösa det innan vi åker vidare.",
       },
       {
         text: "- Uff, är den store Blixten McQueen feg?",
@@ -153,7 +153,7 @@ const scenes = [
         text: "- Joho, massa kul! Häng med här.",
       },
       {
-        text: "Bärgan krokar fast Blixten i sin vinsch krok. Blixten blir lite illamående där han hänger, vad har Bärgan nu i kikaren?",
+        text: "Bärgarn krokar fast Blixten i sin vinsch krok. Blixten blir lite illamående där han hänger, vad har Bärgan nu i kikaren?",
       },
     ],
     videos: [],
@@ -179,7 +179,7 @@ const scenes = [
     ],
     storyText: [
       {
-        text: "Blixten och Bärgan åker tillbaka till åkern och leker kurragömma.",
+        text: "Blixten och Bärgarn åker tillbaka till åkern och leker kurragömma.",
       },
       {
         text: "- Är du redo, jag åker och gömmer mig. Lycka till att hitta mig.",
@@ -207,13 +207,13 @@ const scenes = [
     ],
     storyText: [
       {
-        text: "TTUUUUUUUUUT, Blixten tutade så högt att alla traktorerna välte omkull. Han tittar sig omkring och försöker hitta Bärgan. Plötsligt hör han att det prasslar i buskarna.",
+        text: "TTUUUUUUUUUT, Blixten tutade så högt att alla traktorerna välte omkull. Han tittar sig omkring och försöker hitta Bärgarn. Plötsligt hör han att det prasslar i buskarna.",
       },
       {
         text: "- Haha, hittad! Kunde du inte hittat ett bättre gämställe?",
       },
       {
-        text: "Plötsligt dyker det upp en stor bulldoser som är rasande att Blixten tutade och väckte honom. Blixten åker därifrån med Terry tätt i hasorna. Mitt i rusningen dyker Bärgan upp från ingenstans.",
+        text: "Plötsligt dyker det upp en stor skördetröska som är rasande att Blixten tutade och väckte honom. Blixten åker därifrån med Terry tätt i hasorna. Mitt i rusningen dyker Bärgarn upp från ingenstans.",
       },
       {
         text: "- Visst var det roligt, den var du inte med på. Kom vi tar en genväg vid snåret där borta. Vi har inte tid att leka mer med Terry.",
@@ -238,10 +238,10 @@ const scenes = [
     ],
     storyText: [
       {
-        text: "Trötta efter Bärgans bravader så återvänder dom till Bärgans verkstad för att vila lite. Bärgan försvinner för att hjälpa Rödis att ställa upp Sten som har vält igen.",
+        text: "Trötta efter Bärgarns bravader så återvänder dom till Bärgarns verkstad för att vila lite. Bärgarn försvinner för att hjälpa Rödis att ställa upp Sten som har vält igen.",
       },
       {
-        text: "- Just det Bärgan sa att jag skulle leta efter blommor. Han kanske har något bakom verkstaden.",
+        text: "- Just det Bärgarn sa att jag skulle leta efter blommor. Han kanske har något bakom verkstaden.",
       },
       {
         text: "Blixten kör runt hörnet men hittar inga blommor. Men så ser han att dörren till verkstaden står på glänt. Finns det något roligt där inne?",
@@ -268,13 +268,13 @@ const scenes = [
         text: "- Vilken röra det är här inne. Hur hittar han alla sina prylar?",
       },
       {
-        text: "Längst in, hittar Blixten en hemlig dörr. Han kör in och hittar till sin förvåning ett växhus fullt med orkideér. Han plockar upp en blomma och tar med den ut.",
+        text: "Längst in, hittar Blixten en hemlig dörr. Han kör in och hittar till sin förvåning ett växhus fullt med solrosor. Han plockar upp en blomma och tar med den.",
       },
     ],
     videos: [],
     buttons: [
       {
-        text: "Vänta på Bärgan",
+        text: "Vänta på Bärgarn",
         nextSceneIndex: 9,
       },
     ],
@@ -286,12 +286,12 @@ const scenes = [
       },
       {
         image: "./images/flower.png",
-        item: "Motorolja",
+        item: "Solros",
         text: "Hämta",
       },
       {
         image: "./images/motorolja.png",
-        item: "Blomma",
+        item: "Motorolja",
         text: "Hämta",
       },
     ],
@@ -302,7 +302,7 @@ const scenes = [
     images: [],
     storyText: [
       {
-        text: "Tut tut, Bärgan kommer tillbaka med hela flaket fullt med popcorn.",
+        text: "Tut tut, Bärgarn kommer tillbaka med hela flaket fullt med popcorn.",
       },
       {
         text: "- Titta på mig jag har blivit en pop-car. Jag har fixat bio på min bakgård. Följ med.",
@@ -314,7 +314,7 @@ const scenes = [
         text: "- Hittade du en blomma som jag bad dig?",
       },
       {
-        text: "- Ja, jag hittade en i ditt växthus. Hoppas det är okej att jag tog en där. Sen nör började du odla orkideér?",
+        text: "- Ja, jag hittade en i ditt växthus. Hoppas det är okej att jag tog en. Sen nör började du odla solrosor?",
       },
       {
         text: "- Jag måste ju göra något när min bästa vän åker jorden runt för att bli världens snabbaste racerbil. Kom nu, jag har en sista överraskning.",
@@ -343,19 +343,19 @@ const scenes = [
     ],
     storyText: [
       {
-        text: "Blixten och Bärgan åker till Flat's 8 Café, där står Sally vid ett bord och väntar på dom.",
+        text: "Blixten och Bärgarn åker till Flat's 8 Café, där står Sally vid ett bord och väntar.",
       },
       {
         text: "- Ikväll är jag er kypare, vad önskar ni beställa säger Bärgan.",
       },
       {
-        text: "- Har du fixat allt det här? Jag förstår varför jag skulle ta med mig en blomma.",
+        text: "- Har du fixat allt det här? Jag förstår varför jag skulle ta med mig en blomma säger Blixten och ger den till Sally.",
       },
       {
-        text: "- Jajemän, med lite hjälp av fröken Sally.",
+        text: "- Jajemän, med lite hjälp av fröken Sally säger Bärgarn.",
       },
       {
-        text: "- Han är bra den där Bärgan, eller hur?",
+        text: "- Han är bra den där Bärgarn, eller hur? Säger Sally.",
       },
       {
         text: "- Ja, han är min bästa vän!",
