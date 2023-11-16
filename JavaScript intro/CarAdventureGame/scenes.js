@@ -279,7 +279,7 @@ const scenes = [
         text: "- Vilken röra det är här inne. Hur hittar han alla sina prylar?",
       },
       {
-        text: "Längst in, hittar Blixten en hemlig dörr. Han kör in och hittar till sin förvåning ett växhus fullt med solrosor. Han plockar upp en blomma och tar med den.",
+        text: "Längst in, hittar Blixten en hemlig dörr. Han kör in och hittar, till sin förvåning hittar han ett växhus fullt med solrosor. Han plockar upp en blomma och tar med den.",
       },
     ],
     videos: [],
@@ -292,7 +292,7 @@ const scenes = [
     itemsLists: [
       {
         image: "./images/skiftnyckel.png",
-        item: "Skruvmejsel",
+        item: "Skiftnyckel",
         text: "Hämta",
       },
       {
@@ -319,13 +319,13 @@ const scenes = [
         text: "- Titta på mig jag har blivit en pop-car. Jag har fixat bio på min bakgård. Följ med.",
       },
       {
-        text: "Vilken härlig film Bärgan har fixat och popcornen är perfekt saltade. Denna dag kan inte bli bättre tänker Blixten förnöjt.",
+        text: "Vilken härlig film Bärgarn har fixat och popcornen är perfekt saltade. Denna dag kan inte bli bättre tänker Blixten förnöjt.",
       },
       {
         text: "- Hittade du en blomma som jag bad dig?",
       },
       {
-        text: "- Ja, jag hittade en i ditt växthus. Hoppas det är okej att jag tog en. Sen nör började du odla solrosor?",
+        text: "- Ja, jag hittade en i ditt växthus. Hoppas det är okej att jag tog en. Sen när började du odla solrosor?",
       },
       {
         text: "- Jag måste ju göra något när min bästa vän åker jorden runt för att bli världens snabbaste racerbil. Kom nu, jag har en sista överraskning.",
