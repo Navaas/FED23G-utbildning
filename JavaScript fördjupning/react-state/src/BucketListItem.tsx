@@ -1,21 +1,20 @@
-import { mockedBucketList } from "./bucketData";
+import { BucketItem } from "./bucketData";
 
-function BucketListitem() {
+/* Berätta hur props ser ut! Hämtar bucktItem från bucketData filen. */
+interface Props {
+  bucketItem: BucketItem;
+}
+
+/* Hämta din props, den ska vara av typen Props (son interface ovan) */
+function BucketListitem(props: Props) {
+  const bucketItem = props.bucketItem;
   return (
     <>
-      {/* Hämta en lista, loopa över den med hjälp av map, den hämtar en bucketItem och hämtar en titel. Key måste ha ett key för att veta vad som är vad. */}
-      <ul className="p-4 flex flex-col gap-2 text-lg">
-        {mockedBucketList.map((bucketItem) => (
-          <li
-            key={bucketItem.id}
-            className="border-b-2 border-slate-300 flex justify-between"
-          >
-            <span>{bucketItem.title}</span>
-            {/* Här är en turnery för att kolla isChecked */}
-            <span>{bucketItem.isChecked ? "✅" : ""}</span>{" "}
-          </li>
-        ))}
-      </ul>
+      <li className="border-b-2 border-slate-300 flex justify-between">
+        <span>{bucketItem.title}</span>
+        {/* Här är en turnery för att kolla isChecked */}
+        <span>{bucketItem.isChecked ? "✅" : ""}</span>{" "}
+      </li>
     </>
   );
 }
