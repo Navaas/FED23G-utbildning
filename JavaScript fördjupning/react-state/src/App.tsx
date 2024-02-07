@@ -5,7 +5,7 @@ import { mockedBucketList } from "./bucketData";
 function App() {
   return (
     <>
-      <Header />
+      <Header /> {/* Mapp och key här ihop. */}
       <ul className="p-4 flex flex-col gap-2 text-lg">
         {mockedBucketList.map((bucketItem) => (
           <BucketListitem bucketItem={bucketItem} key={bucketItem.id} />
