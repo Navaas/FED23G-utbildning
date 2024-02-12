@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 interface Props {
   title?: string;
@@ -8,6 +8,10 @@ interface Props {
 function CountButton(props: Props) {
   // Lägg till HOOK´S STATE
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = "Number is: " + count;
+  });
 
   return (
     <button
