@@ -4,8 +4,9 @@ function App() {
   return (
     <>
       <h1>Hello world</h1>
-      <CountButton title="Röd" />
-      <CountButton title="Grön" />
+      <CountButton>Röd</CountButton>
+      <CountButton title="Grön" />{" "}
+      {/* Grön och Röd är children som skickas som props till CountButton. Det är två olika sätt att skriva, båda funkar. Använd av title eller children. */}
     </>
   );
 }
