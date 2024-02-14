@@ -1,6 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+interface Day {
+  datum: string;
+  helgdag: string;
+}
 
 function App() {
+  const [holidays, setHolidays] = useState<Day[]>([]);
+
   // Att hämta ifformationen från ett API är en sidoeffekt
 
   useEffect(() => {
@@ -11,14 +18,22 @@ function App() {
       );
       const data = await response.json();
       const holidays = data.dagar.filter((d) => d.helgdag);
-      console.log(holidays);
+      setHolidays(holidays);
     }
+
     getSwedishHolidays();
   }, []);
 
   return (
     <>
       <h1>FETCH</h1>
+      <ul>
+        {holidays.map((holiday) => (
+          <li key={holiday.datum}>
+            {holiday.helgdag} - {holiday.datum}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
