@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useLog from "./useLocalStorageState";
 
 interface Props {
   title: string;
@@ -6,6 +7,8 @@ interface Props {
 
 function CountButton(props: Props) {
   const [count, setCount] = useState(0);
+  useLog();
+
   return (
     <>
       <button
