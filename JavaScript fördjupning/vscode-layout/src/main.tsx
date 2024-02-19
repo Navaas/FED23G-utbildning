@@ -7,12 +7,15 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import App from "./App";
+import Explorer from "./Explorer";
+import Search from "./Search";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" Component={App}>
-      <Route path="explorer" element={<span>Explorer</span>} />
-      <Route path="search" element={<span>Search</span>} />
+      <Route path="explorer" Component={Explorer} />
+      <Route path="search" Component={Search} />
+      <Route path="*" element={<span>404</span>} />
     </Route>
   )
 );
