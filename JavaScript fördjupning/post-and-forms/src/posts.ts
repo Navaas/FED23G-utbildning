@@ -1,3 +1,4 @@
+/* Talar om hur en Post ser ut, vad den innehåller. */
 export interface Post {
   id: string;
   url: string;
@@ -5,6 +6,7 @@ export interface Post {
   content: string;
 }
 
+/* Mockad data, hittepå data som senare kan bytas ut. */
 export const mockedPosts: Post[] = [
   {
     id: "1",
