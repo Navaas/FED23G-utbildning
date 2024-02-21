@@ -6,11 +6,13 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import App from "./App.tsx";
+import AppLayout from "./AppLayout.tsx";
+import HomePage from "./pages/HomePage.tsx";
+import NewPostPage from "./pages/NewPostPage.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" Component={App}>
+    <Route path="/" Component={AppLayout}>
       <Route index Component={HomePage} />
       <Route path="new" Component={NewPostPage} />
     </Route>
