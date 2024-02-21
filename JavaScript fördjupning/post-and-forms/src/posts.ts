@@ -1,10 +1,15 @@
-/* Talar om hur en Post ser ut, vad den innehåller. */
-export interface Post {
-  id: string;
-  url: string;
-  title: string;
-  content: string;
-}
+import { z } from "zod";
+
+export const PostSchema = z.object({
+  id: z.string(),
+  url: z.string().url({ message: "Var god och ange en giltig url" }),
+  title: z.string().min(5, { message: "Titeln måste vara minst 5 tecken" }),
+  content: z
+    .string()
+    .max(60, { message: "Inlägget får vara 60 tecken långt." }),
+});
+
+export type Post = z.infer<typeof PostSchema>;
 
 /* Mockad data, hittepå data som senare kan bytas ut. */
 export const mockedPosts: Post[] = [
