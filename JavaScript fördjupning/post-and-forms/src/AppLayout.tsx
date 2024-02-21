@@ -1,11 +1,13 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function AppLayout() {
   return (
     <>
-      <header className="flex justify-between p-4 bg-slate-400">
-        <h1>Hello world</h1>
-        <span className="cursor-pointer">➕</span>
+      <header className="flex justify-between p-2 bg-green-200 items-center">
+        <Link to="/">
+          <h1 className="text-2xl">InstaFamily</h1>
+        </Link>
+        <Link to="/new">➕</Link>
       </header>
       <main>
         <Outlet />
