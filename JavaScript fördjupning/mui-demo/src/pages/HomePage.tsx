@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 function HomePage() {
   return (
@@ -10,6 +10,9 @@ function HomePage() {
         corporis laudantium nam culpa, maxime, distinctio magnam, labore
         aspernatur! Obcaecati, ipsum!
       </Typography>
+      <Button variant="contained" color="primary">
+        Klicka på mig!
+      </Button>
     </Box>
   );
 }
