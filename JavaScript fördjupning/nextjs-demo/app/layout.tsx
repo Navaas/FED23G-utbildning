@@ -28,7 +28,7 @@ export default function RootLayout({
           </nav>
         </header>
         {children}
-        <footer className="bg-green-100">
+        <footer className="bg-green-100 p-4">
           <p>Footer</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, et.
