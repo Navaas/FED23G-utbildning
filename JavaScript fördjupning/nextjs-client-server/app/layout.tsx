@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import CountLabel from "./ui/CountLabel";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
         <header className="p-4 bg-slate-200">
           <nav className="flex justify-between text-xl">
             <Link href="/">Home</Link>
-            <span>12</span>
+            <CountLabel />
           </nav>
         </header>
         {children}
