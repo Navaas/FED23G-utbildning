@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import CountProvider from "./CountProvider";
 import "./globals.css";
 import CountLabel from "./ui/CountLabel";
 
@@ -19,13 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="p-4 bg-slate-200">
-          <nav className="flex justify-between text-xl">
-            <Link href="/">Home</Link>
-            <CountLabel />
-          </nav>
-        </header>
-        {children}
+        {/* Hämta in providern som går vidare till CountButton */}
+        <CountProvider>
+          <header className="p-4 bg-slate-200">
+            <nav className="flex justify-between text-xl">
+              <Link href="/">Home</Link>
+              <CountLabel />
+            </nav>
+          </header>
+          {children}
+        </CountProvider>
       </body>
     </html>
   );
