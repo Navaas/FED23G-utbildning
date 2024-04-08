@@ -13,47 +13,27 @@ const Container = styled.div`
   font-family: "Quicksand", sans-serif;
   display: flex;
   justify-content: center;
+  height: 100%;
   padding: 30px;
-  height: 110vh;
-  @media (max-width: 768px) {
-    height: 80vh;
-  }
-  @media (max-width: 480px) {
-    height: 90vh;
-  }
+  flex-wrap;
 `;
 
 const Product = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh;
-  @media (max-width: 768px) {
-    height: 70vh;
-    margin-top: 50px;
-  }
-  @media (max-width: 480px) {
-    width: 60vh;
-  }
+  height: 100%;
 `;
 
 const SingleProduct = styled.div`
   border: lightgrey solid 1px;
   background: white;
   border-radius: 10px;
-  width: 75vh;
+  max-width: 100%;
+  flex-wrap;
   height: 100vh;
   text-align: center;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  @media (max-width: 768px) {
-    width: 55vh;
-    height: 80vh;
-  }
-  @media (max-width: 480px) {
-    width: 50vh;
-    height: 90vh;
-    margin-top: 30px;
-  }
 `;
 
 const SingleProductImage = styled.img`
@@ -83,8 +63,8 @@ const Title = styled.p`
 const LikeAndBuyDiv = styled.div`
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 10px;
+  gap: 5px;
+  margin-top: 10px;
 `;
 
 function ProductView(props: Props) {
@@ -106,12 +86,12 @@ function ProductView(props: Props) {
           <div style={{ padding: "20px" }}>
             <Title>Beskrivning:</Title>
             <Description> {description}</Description>
+            <LikeAndBuyDiv>
+              <LikeButton />
+              <BuyButton product={props.product} />
+            </LikeAndBuyDiv>
           </div>
           {/* Med variabel */}
-          <LikeAndBuyDiv>
-            <LikeButton />
-            <BuyButton product={props.product} />
-          </LikeAndBuyDiv>
         </SingleProduct>
       </Product>
     </Container>
