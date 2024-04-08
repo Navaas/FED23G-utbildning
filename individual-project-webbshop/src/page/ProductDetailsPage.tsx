@@ -37,8 +37,7 @@ const SingleProduct = styled.div`
 `;
 
 const SingleProductImage = styled.img`
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   height: 65%;
   @media (max-width: 480px) {
     height: 45%;
