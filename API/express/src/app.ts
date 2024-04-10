@@ -1,15 +1,14 @@
 // Det äldre sättet att hämta express
-const express = require("express");
+import express, { NextFunction, Request, Response } from "express";
 // Hämta mockad data från en fil
-const products = require("./products");
-// Våra produkter (Bör ligga i en egen fil)
+import { products } from "./products";
 
 // Låt app få tillgång till express
 // Skapa butiken
 const app = express();
 const port = 3000;
 
-function logger(req, res, next) {
+function logger(req: Request, res: Response, next: NextFunction) {
   console.log(new Date().toISOString(), req.method, req.url);
   next();
 }
