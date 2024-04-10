@@ -1,5 +1,11 @@
 // Våra produkter
-const products = [
+export interface Product {
+  id: string;
+  title: string;
+  price: number;
+}
+
+export const products: Product[] = [
   {
     id: "1",
     title: "Banankaka",
@@ -11,5 +17,3 @@ const products = [
     price: 499,
   },
 ];
-
-module.exports = { products };
