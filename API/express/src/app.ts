@@ -16,6 +16,7 @@ function logger(req: Request, res: Response, next: NextFunction) {
 // Binder till en url och vad som ska hända vid den url:en.
 // Tänk att det är en butik. Vad ska hända i butiken. Definiera hur butiken ska fungera
 // Logger ska köras på alla. MÅSTE LIGGA FÖRST.
+app.use(express.json());
 app.use(logger);
 
 app.get("/", (req, res) => {
@@ -24,6 +25,11 @@ app.get("/", (req, res) => {
 
 app.get("/products", (req, res) => {
   res.json(products);
+});
+
+app.post("/products", (req, res) => {
+  products.push(req.body);
+  res.json("Produkten är tillagd");
 });
 
 // Öppna butiken/dörrarna. Vilken port ska det hända på.
