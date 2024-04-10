@@ -4,3 +4,13 @@ GET http://localhost:3000
 
 ### Hämta produkter
 GET http://localhost:3000/products
+
+### Spara en ny produkt
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+"id": "5",
+"title": "Dammsugare",
+"price": 15
+}
