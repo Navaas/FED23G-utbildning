@@ -20,16 +20,26 @@ app.use(express.json());
 app.use(logger);
 
 app.get("/", (req, res) => {
-  res.json("Hej kära kund, hur kan jag hjälpa dig idag?");
+  res.status(200).json("Hej kära kund, hur kan jag hjälpa dig idag?");
 });
 
 app.get("/products", (req, res) => {
-  res.json(products);
+  res.status(200).json(products);
 });
 
+/* Här skapas ett unikt id och tar med egenskaperna från products [] */
 app.post("/products", (req, res) => {
-  products.push(req.body);
-  res.json("Produkten är tillagd");
+  const product = {
+    id: Date.now().toString(),
+    ...req.body,
+  };
+  products.push(product);
+  res.status(201).json(product);
+});
+
+// Felmeddelanden generellt av felaktiga url:er
+app.use("*", (req, res) => {
+  res.status(404).json("Jag förstår inte vad du menar");
 });
 
 // Öppna butiken/dörrarna. Vilken port ska det hända på.
