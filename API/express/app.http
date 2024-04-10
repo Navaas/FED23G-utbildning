@@ -1,0 +1,6 @@
+### Startsidan
+GET http://localhost:3000
+
+
+### Hämta produkter
+GET http://localhost:3000/products
