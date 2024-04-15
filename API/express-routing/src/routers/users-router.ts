@@ -21,3 +21,5 @@ usersRouter.put("/:id", (req, res) => {
 usersRouter.delete("/:id", (req, res) => {
   res.status(200).json("DELETE ONE USER");
 }); /* Ta bort kontot */
+
+export default usersRouter;
