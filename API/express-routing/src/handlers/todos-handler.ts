@@ -1,16 +1,30 @@
 import { Request, Response } from "express";
 
+interface Todo {
+  id: string;
+  title: string;
+  details: string;
+}
+// Temporär databas till en databas implementeras.
+let todos: Todo[] = [];
+
 /* Här hanteras koden */
 export const getAllTodos = (req: Request, res: Response) => {
-  res.status(200).json("GET ALL TODOS");
+  res.status(200).json(todos);
 };
 
 export const getOneTodo = (req: Request, res: Response) => {
-  res.status(200).json("GET A TODOS");
+  const todo = todos.find((t) => t.id === req.params.id);
+  res.status(200).json(todo);
 };
 
 export const createTodo = (req: Request, res: Response) => {
-  res.status(200).json("CREATE A TODOS");
+  const todo = {
+    id: Date.now().toString(),
+    ...req.body,
+  };
+  todos.push(todo);
+  res.status(201).json(todo);
 };
 
 export const updateTodo = (req: Request, res: Response) => {
@@ -18,5 +32,6 @@ export const updateTodo = (req: Request, res: Response) => {
 };
 
 export const deleteTodo = (req: Request, res: Response) => {
-  res.status(200).json("DELETE A TODOS");
+  todos = todos.filter((t) => t.id !== req.params.id);
+  res.status(200).json(null);
 };

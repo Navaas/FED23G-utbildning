@@ -2,26 +2,27 @@
 GET http://localhost:3500/api/todos
 
 ### GET ONE TODO
-GET http://localhost:3500/api/todos/1
+GET http://localhost:3500/api/todos/1713174735420
+
 
 ### CREATE TODO
 POST http://localhost:3500/api/todos
-Content-Type: application/application/json
+Content-Type: application/json
 
 {
     "title": "Äta mat",
-    "details": "lorem lorem lorem",
+    "details": "lorem lorem lorem"
 }
 
 
 ### UPDATE TODO
-PUT http://localhost:3500/api/todos/1
-Content-Type: application/application/json
+PUT http://localhost:3500/api/todos/1713174480380
+Content-Type: application/json
 
 {
     "title": "Äta mat",
-    "details": "lorem lorem lorem",
+    "details": "lorem lorem lorem"
 }
 
 ### DELETE ONE TODO
-DELETE http://localhost:3500/api/todos/1
+DELETE http://localhost:3500/api/todos/1713174735420

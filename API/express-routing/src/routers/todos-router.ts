@@ -7,7 +7,7 @@ import {
   updateTodo,
 } from "../handlers/todos-handler";
 
-/* Här är routern för endpoints todo */
+/* Här är routern för endpoints todo som hämtar in sina handlers */
 
 const todosRouter = express.Router();
 

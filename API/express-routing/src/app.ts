@@ -9,7 +9,6 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json());
-
 app.use("/api/todos", todoRouter);
 app.use("/api/users", usersRouter);
 // app.use("/api/users", todoRouter);
