@@ -11,7 +11,8 @@ Content-Type: application/json
 
 {
     "title": "Äta mat",
-    "details": "lorem lorem lorem"
+    "details": "lorem lorem lorem",
+    "extraData": "Should this be allowed?"
 }
 
 

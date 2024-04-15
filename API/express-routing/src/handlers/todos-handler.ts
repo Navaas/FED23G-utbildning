@@ -1,10 +1,6 @@
 import { Request, Response } from "express";
+import { Todo, TodoCreateSchema } from "../schemas/todo-schemas";
 
-interface Todo {
-  id: string;
-  title: string;
-  details: string;
-}
 // Temporär databas till en databas implementeras.
 let todos: Todo[] = [];
 
@@ -19,9 +15,11 @@ export const getOneTodo = (req: Request, res: Response) => {
 };
 
 export const createTodo = (req: Request, res: Response) => {
+  const todoBody = TodoCreateSchema.parse(req.body);
+
   const todo = {
     id: Date.now().toString(),
-    ...req.body,
+    ...todoBody,
   };
   todos.push(todo);
   res.status(201).json(todo);
