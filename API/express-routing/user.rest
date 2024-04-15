@@ -1,0 +1,25 @@
+### GET ALL
+GET http://localhost:3500/api/users/1
+
+
+### CREATE TODO
+POST http://localhost:3500/api/users/register
+Content-Type: application/application/json
+
+{
+    "title": "Anna Svensson",
+    "details": "lorem lorem lorem",
+}
+
+
+### UPDATE TODO
+PUT http://localhost:3500/api/users/1
+Content-Type: application/application/json
+
+{
+    "title": "Äta mat",
+    "details": "lorem lorem lorem",
+}
+
+### DELETE ONE TODO
+DELETE http://localhost:3500/api/users/1
