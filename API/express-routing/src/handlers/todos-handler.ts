@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 
+/* Här hanteras koden */
 export const getAllTodos = (req: Request, res: Response) => {
   res.status(200).json("GET ALL TODOS");
 };

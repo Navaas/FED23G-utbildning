@@ -1,25 +1,20 @@
 import express from "express";
+import {
+  createTodo,
+  deleteTodo,
+  getAllTodos,
+  getOneTodo,
+  updateTodo,
+} from "../handlers/todos-handler";
+
+/* Här är routern för endpoints todo */
 
 const todosRouter = express.Router();
 
-todosRouter.get("/", (req, res) => {
-  res.status(200).json("GET ALL TODOS");
-});
-
-todosRouter.get("/:id", (req, res) => {
-  res.status(200).json("GET A TODOS");
-});
-
-todosRouter.post("/", (req, res) => {
-  res.status(200).json("CREATE A TODOS");
-});
-
-todosRouter.put("/:id", (req, res) => {
-  res.status(200).json("UPDATE A TODOS");
-});
-
-todosRouter.delete("/:id", (req, res) => {
-  res.status(200).json("DELETE A TODOS");
-});
+todosRouter.get("/", getAllTodos);
+todosRouter.get("/:id", getOneTodo);
+todosRouter.post("/", createTodo);
+todosRouter.put("/:id", updateTodo);
+todosRouter.delete("/:id", deleteTodo);
 
 export default todosRouter;
