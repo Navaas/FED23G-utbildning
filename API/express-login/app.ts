@@ -1,4 +1,5 @@
 import cookieSession from "cookie-session";
+import "dotenv/config";
 import express from "express";
 import { getAllUsers, getUserSelf, loginUser, registerUser } from "./handlers";
 import { isLoggedIn } from "./middlewares";
@@ -10,7 +11,7 @@ app.use(express.json());
 app.use(
   cookieSession({
     name: "login",
-    secret: "SOm3Th1ngS3cur3!", // Borde hämtas från en miljövariabel.
+    secret: process.env.SECRET || "SOm3Th1ngS3cur3!", // En miljövariabel
     maxAge: 1000 * 10, // 10sek
     httpOnly: true, // Bara webbläsaren har tillgång till den, inte Javascripten.
   })
