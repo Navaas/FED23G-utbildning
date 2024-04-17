@@ -2,8 +2,10 @@
 
 GET http://localhost:4300/users
 
-### Registrera en användare
+### Hämta info om den inloggade användaren
+GET http://localhost:4300/users/auth
 
+### Registrera en användare
 POST http://localhost:4300/users/register
 Content-Type:  application/json
 
