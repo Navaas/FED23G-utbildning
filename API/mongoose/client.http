@@ -1,0 +1,13 @@
+### GET ALL BOOKS
+GET http://localhost:4400/api/books
+
+### CREATE  A BOOK
+POST http://localhost:4400/api/books
+Content-Type: application/json
+
+{
+    "titlle": "Harry Potter och De vises Sten",
+    "autor": "6628e8b361833a1a4c6f4fc5",
+    "isbn": "E322345566464",
+    "publishedDate": "1998-10-11T11:13:04.123Z"
+}
