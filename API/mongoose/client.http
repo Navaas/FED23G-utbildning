@@ -6,8 +6,20 @@ POST http://localhost:4400/api/books
 Content-Type: application/json
 
 {
-    "titlle": "Harry Potter och De vises Sten",
-    "autor": "6628e8b361833a1a4c6f4fc5",
+    "titlle": "Mysans äventyr på månen",
+    "autor": "6628fe26fe7408e6be2482dd",
     "isbn": "E322345566464",
-    "publishedDate": "1998-10-11T11:13:04.123Z"
+    "publishedDate": "2024-04-11T11:13:04.123Z"
+}
+
+### GET ALL AUTHORS
+GET http://localhost:4400/api/authors
+
+### CREATE  A AUTHORS
+POST http://localhost:4400/api/authors
+Content-Type: application/json
+
+{
+    "name": "Mysan Mysansson",
+    "yearOfBirth": 2013
 }

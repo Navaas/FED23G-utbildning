@@ -5,17 +5,20 @@ import express, {
 } from "express";
 import "express-async-errors";
 import mongoose from "mongoose";
+import { authorRouter } from "./resources/authors/authors-router";
 import { booksRouter } from "./resources/books/books-router";
 
+/* SKAPA API'ET */
 const app = express();
+app.use(express.json());
 
 /* Skapa ett unikt objectid */
 // const result = new Types.ObjectId();
 // console.log(result);
 
-app.use(express.json());
+/* API resurser */
 app.use("/api/books", booksRouter);
-// app.use(authorRouter);
+app.use("/api/authors", authorRouter);
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.log(err);

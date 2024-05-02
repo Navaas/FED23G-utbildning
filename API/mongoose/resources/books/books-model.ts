@@ -3,7 +3,7 @@ import mongoose, { SchemaTypes, type InferSchemaType } from "mongoose";
 /* Schema för en bok, beskriver hur en bok ser ut */
 const BookSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  author: { type: SchemaTypes.ObjectId, require: true },
+  author: { type: SchemaTypes.ObjectId, ref: "Author", require: true },
   isbn: { type: String, require: true },
   publishedDate: { type: Date, require: true },
   createdAt: { type: Date, default: new Date() },

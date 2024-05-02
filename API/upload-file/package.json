@@ -1,0 +1,17 @@
+{
+  "name": ".",
+  "module": "server.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "busboy": "^1.6.0",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3"
+  }
+}
