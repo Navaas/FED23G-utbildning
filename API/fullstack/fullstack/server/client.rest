@@ -1,0 +1,25 @@
+### GET ALL BOOKS
+GET http://localhost:4400/api/books
+
+### CREATE A BOOK
+POST http://localhost:4400/api/books
+Content-Type: application/json
+
+{
+  "title": "En bok!",
+  "author": "662f6f449436eabb4ddaf590",
+  "isbn": "E18293771623",
+  "publishDate": "2023-10-11T11:13:04.123Z"
+}
+
+### GET ALL AUTHORS
+GET http://localhost:4400/api/authors
+
+### CREATE AN AUTHOR
+POST http://localhost:4400/api/authors
+Content-Type: application/json
+
+{
+  "name": "Mjsausan",
+  "yearOfBirth": 2015 
+}

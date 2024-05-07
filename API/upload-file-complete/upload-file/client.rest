@@ -1,0 +1,26 @@
+### GET POST
+GET http://localhost:6400/api/posts/12989376123571283
+
+### ADD A POST
+POST http://localhost:6400/api/posts
+Content-Type: application/json
+
+{
+  "text": "Ett annat inlägg",
+  "imageId": "663379d3db687e9546157636"
+}
+
+
+### GET IMAGE
+GET http://localhost:6400/api/images/66337ccfe2858c817e0b0545
+
+### UPLOAD IMAGE
+POST http://localhost:6400/api/images
+Content-Type: multipart/form-data; boundary=FormRow
+
+--FormRow
+Content-Disposition: form-data; name="image"; filename="cartoon.jpg"
+Content-Type: image/jpeg
+
+< ./cartoon.jpg
+--FormRow--
