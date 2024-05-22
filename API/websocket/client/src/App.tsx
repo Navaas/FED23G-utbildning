@@ -33,6 +33,10 @@ export default function App() {
     <div className="App">
       <h1>Hello world</h1>
       {isConnected ? "Connected" : "Not Connected"}
+
+      {messages.map((message) => (
+        <p>{message}</p>
+      ))}
     </div>
   );
 }
