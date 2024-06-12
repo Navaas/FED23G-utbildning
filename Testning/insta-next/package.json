@@ -8,18 +8,25 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "prisma db seed",
-    "db-push": "prisma db push",
-    "test": "cypress open"
+    "push": "prisma db push",
+    "reset": "tsx prisma/reset.ts",
+    "studio": "prisma studio",
+    "cy:open": "dotenv -e .env.test -- cypress open --e2e --browser chrome",
+    "test": "cross-env NODE_ENV=test start-server-and-test dev http://localhost:3000 cy:open",
+    "test:push": "dotenv -e .env.test -- prisma db push"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed/seed.ts"
+    "seed": "tsx prisma/seed/seed.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^7.4.2",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
+    "start-server-and-test": "^2.0.4",
     "zod": "^3.23.8"
   },
   "type": "module",

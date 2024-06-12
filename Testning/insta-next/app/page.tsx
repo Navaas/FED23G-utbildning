@@ -5,6 +5,7 @@ import PostCard from "./ui/PostCard";
 export default async function Home() {
   return (
     <main>
+      <h1>Welcome to my blog</h1>
       <Header />
       <Link href="/NewPostPage">
         <button>Skapa ny</button>
