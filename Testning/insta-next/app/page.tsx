@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <main>
       <Header />
-      <Link href="/PostForm">
+      <Link href="/NewPostPage">
         <button>Skapa ny</button>
       </Link>
       <Link href="/FavoritePage">
