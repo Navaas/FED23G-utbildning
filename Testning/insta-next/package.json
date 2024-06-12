@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "prisma db seed",
-    "db-push": "prisma db push"
+    "db-push": "prisma db push",
+    "test": "cypress open"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed/seed.ts"
@@ -26,6 +27,7 @@
     "@types/node": "^20.14.2",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cypress": "^13.11.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
