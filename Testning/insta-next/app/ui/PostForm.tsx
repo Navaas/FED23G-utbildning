@@ -1,21 +1,59 @@
 "use client";
 
-import React from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { savePost } from "../actions/post";
+
+export const postSchema = z.object({
+  title: z.string().min(1),
+  content: z.string().min(1),
+  image: z.string().optional(),
+  postDate: z.date(),
+});
+
+export type PostCreate = z.infer<typeof postSchema>;
 
 function PostForm() {
-  const handleSubmit = () => {
-    console.log("Jag är sparad");
+  const form = useForm<PostCreate>({ resolver: zodResolver(postSchema) });
+
+  const {
+    formState: { errors },
+  } = form;
+
+  const handleSubmit = async (data: PostCreate) => {
+    try {
+      await savePost(data);
+      form.reset();
+    } catch (error: any) {
+      console.log(error);
+    }
   };
 
   return (
-    <div>
-      <h1>Här kommer ett formulär för att skapa en post</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="title" placeholder="Title" />
-        <textarea name="content" placeholder="Skriv din text.." />
-        <button>Skapa post</button>
-      </form>
-    </div>
+    <form
+      className="w-96 flex flex-col gap-2"
+      onSubmit={form.handleSubmit(handleSubmit)}
+    >
+      <input
+        {...form.register("title")}
+        type="text"
+        placeholder="Skriv en titel.."
+      />
+      {errors.title && <span>{errors.title.message}</span>}
+      <input
+        {...form.register("image")}
+        type="text"
+        placeholder="Lägg till bild url.."
+      />
+      <textarea
+        {...form.register("content")}
+        rows={4}
+        placeholder="Beskrivning.."
+      />
+      {errors.content && <span>{errors.content.message}</span>}
+      <button>Save post</button>
+    </form>
   );
 }
 
