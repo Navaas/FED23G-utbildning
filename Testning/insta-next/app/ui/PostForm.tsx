@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import router from "next/router";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { savePost } from "../actions/post";
@@ -15,7 +16,7 @@ export type PostCreate = z.infer<typeof postSchema>;
 
 function PostForm() {
   const form = useForm<PostCreate>({ resolver: zodResolver(postSchema) });
-
+  // const router = useRouter();
   const { errors } = form.formState;
 
   const handleSubmit = async (data: PostCreate) => {
@@ -23,6 +24,7 @@ function PostForm() {
       await savePost(data);
       console.log("Ny post skapad:", data);
       form.reset();
+      router.push("/FavoritePostsPage");
     } catch (error: any) {
       console.error("Error handling submit:", error);
     }
