@@ -6,13 +6,13 @@ async function PostCard() {
     orderBy: { id: "desc" } /* Byter ordningen på listan */,
   });
   return (
-    <div className="flex  gap-8 flex-col  md:flex-row">
+    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
       {posts.map((post) => (
         <div
           key={post.id}
-          className="post-card bg-black text-white p-4  md:w-3/4 lg:w-2/3 h-96 mx-auto"
+          className="post-card bg-black text-white p-4 h-full w-full mx-auto"
         >
-          <div className="relative w-full  h-2/3">
+          <div className="relative w-full  h-96">
             <Image
               src={post.image}
               alt="Description of image"
