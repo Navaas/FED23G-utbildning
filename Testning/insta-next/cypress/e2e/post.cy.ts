@@ -19,7 +19,19 @@ describe("Test to create new post", () => {
       cy.url().should("not.eq", initialUrl);
     });
   });
-  it("Should visit form to create new post", () => {
+  it("Should create new post", () => {
+    const newPost = {
+      title: "Testinlägg",
+      image: "https://example.com/image.jpg",
+      content: "Detta är ett testinlägg för Cypress testning.",
+    };
+
     cy.visit("/NewPostPage");
+    cy.get("form").within(() => {
+      cy.get('input[name="title"]').type(newPost.title);
+      cy.get('input[name="image"]').type(newPost.image);
+      cy.get('textarea[name="content"]').type(newPost.content);
+      cy.get("button").contains("Spara").click();
+    });
   });
 });
