@@ -10,7 +10,7 @@ async function PostCard() {
       {posts.map((post) => (
         <div
           key={post.id}
-          className="post-card bg-black text-white p-4 w-full md:w-3/4 lg:w-2/3 h-128 mx-auto"
+          className="post-card bg-black text-white p-4  md:w-3/4 lg:w-2/3 h-96 mx-auto"
         >
           <div className="relative w-full  h-2/3">
             <Image

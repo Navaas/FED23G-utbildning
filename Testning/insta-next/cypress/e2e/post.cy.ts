@@ -19,4 +19,7 @@ describe("Test to create new post", () => {
       cy.url().should("not.eq", initialUrl);
     });
   });
+  it("Should visit form to create new post", () => {
+    cy.visit("/NewPostPage");
+  });
 });
