@@ -1,6 +1,9 @@
-import React from "react";
 import PostForm from "../ui/PostForm";
 
 export default function NewPostPage() {
-  return <PostForm />;
+  return (
+    <main className="flex justify-center items-center h-screen">
+      <PostForm />
+    </main>
+  );
 }

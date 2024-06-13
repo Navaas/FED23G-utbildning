@@ -6,9 +6,9 @@ import { z } from "zod";
 import { savePost } from "../actions/post";
 
 export const postSchema = z.object({
-  title: z.string().min(1),
-  content: z.string().min(1),
-  image: z.string().optional(),
+  title: z.string().min(1, { message: "Titel är obligatorisk" }),
+  content: z.string().min(1, { message: "Beskrivning är obligatorisk" }),
+  image: z.string().min(1, { message: "Bild är obligatorisk" }),
   postDate: z.date(),
 });
 
@@ -24,6 +24,7 @@ function PostForm() {
   const handleSubmit = async (data: PostCreate) => {
     try {
       await savePost(data);
+      console.log("Post saved");
       form.reset();
     } catch (error: any) {
       console.log(error);
@@ -31,29 +32,42 @@ function PostForm() {
   };
 
   return (
-    <form
-      className="w-96 flex flex-col gap-2"
-      onSubmit={form.handleSubmit(handleSubmit)}
-    >
-      <input
-        {...form.register("title")}
-        type="text"
-        placeholder="Skriv en titel.."
-      />
-      {errors.title && <span>{errors.title.message}</span>}
-      <input
-        {...form.register("image")}
-        type="text"
-        placeholder="Lägg till bild url.."
-      />
-      <textarea
-        {...form.register("content")}
-        rows={4}
-        placeholder="Beskrivning.."
-      />
-      {errors.content && <span>{errors.content.message}</span>}
-      <button>Save post</button>
-    </form>
+    <div className="bg-slate-300 p-4 rounded-md w-1/3 drop-shadow-xl">
+      <form
+        className="w-full flex flex-col gap-2 "
+        onSubmit={form.handleSubmit(handleSubmit)}
+      >
+        <h2>Skapa nytt inlägg</h2>
+        <input
+          {...form.register("title")}
+          type="text"
+          placeholder="Skriv en titel.."
+          className="p-2 w-full rounded-md mt-4"
+        />
+        {errors.title && (
+          <span className="text-red-600">{errors.title.message}</span>
+        )}
+        <input
+          {...form.register("image")}
+          type="text"
+          placeholder="Lägg till bild url.."
+          className="p-2 rounded-md"
+        />
+        {errors.image && (
+          <span className="text-red-600">{errors.image.message}</span>
+        )}
+        <textarea
+          {...form.register("content")}
+          rows={8}
+          placeholder="Beskrivning.."
+          className="p-2 rounded-md"
+        />
+        {errors.content && (
+          <span className="text-red-600">{errors.content.message}</span>
+        )}
+        <button>Save post</button>
+      </form>
+    </div>
   );
 }
 
