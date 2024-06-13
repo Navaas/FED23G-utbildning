@@ -1,5 +1,6 @@
 "use server";
 import { db } from "@/prisma/db";
+import { revalidatePath } from "next/cache";
 import { PostCreate } from "../ui/PostForm";
 
 export async function savePost(incomingData: PostCreate) {
@@ -12,6 +13,7 @@ export async function savePost(incomingData: PostCreate) {
         postDate: new Date(),
       },
     });
+    revalidatePath("/");
     return post;
   } catch (error) {
     console.error("Error saving post:", error);
