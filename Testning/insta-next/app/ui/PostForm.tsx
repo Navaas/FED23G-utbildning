@@ -1,7 +1,6 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import router from "next/router";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { savePost } from "../actions/post";
@@ -24,7 +23,7 @@ function PostForm() {
       await savePost(data);
       console.log("Ny post skapad:", data);
       form.reset();
-      router.push("/FavoritePostsPage");
+      // router.push("/FavoritePostsPage");
     } catch (error: any) {
       console.error("Error handling submit:", error);
     }

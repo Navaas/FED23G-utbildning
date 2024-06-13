@@ -22,3 +22,19 @@ export async function savePost(incomingData: PostCreate) {
     await db.$disconnect();
   }
 }
+
+export async function deletePost(id: string) {
+  try {
+    await db.post.delete({
+      where: {
+        id: id,
+      },
+    });
+    revalidatePath("/");
+  } catch (error) {
+    console.error("Error deleting post:", error);
+    throw error;
+  } finally {
+    await db.$disconnect();
+  }
+}
