@@ -30,7 +30,7 @@ function PostForm() {
   };
 
   return (
-    <div className="bg-emerald-100 p-4 rounded-md w-full sm:w-1/3 m-4 drop-shadow-xl">
+    <div className="bg-blue-50 p-4 rounded-md w-full sm:w-1/3 m-4 drop-shadow-xl">
       <form
         className="w-full flex flex-col gap-2 "
         onSubmit={form.handleSubmit(handleSubmit)}
@@ -64,7 +64,7 @@ function PostForm() {
         {errors.content && (
           <span className="text-red-600">{errors.content.message}</span>
         )}
-        <button className="p-2 bg-emerald-600 text-white">Spara</button>
+        <button className="p-2 bg-blue-400 text-white">Spara</button>
       </form>
     </div>
   );
