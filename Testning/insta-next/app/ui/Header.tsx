@@ -1,11 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from "../image/holiday-photo.png";
 
 export default function Header() {
   return (
     <header>
-      <div className="bg-blue-300 p-4 flex justify-between">
+      <div className="bg-blue-300 flex justify-between">
         <Link href="/">
-          <h1 className="text-blue-950">Insta-next</h1>
+          <Image src={logo} alt="logo" width={90} height={90} />
         </Link>
         <Link href="/NewPostPage">
           <svg
