@@ -15,7 +15,6 @@ export type PostCreate = z.infer<typeof postSchema>;
 
 function PostForm() {
   const form = useForm<PostCreate>({ resolver: zodResolver(postSchema) });
-  // const router = useRouter();
   const { errors } = form.formState;
 
   const handleSubmit = async (data: PostCreate) => {
@@ -23,7 +22,7 @@ function PostForm() {
       await savePost(data);
       console.log("Ny post skapad:", data);
       form.reset();
-      // router.push("/FavoritePostsPage");
+      window.location.href = "/";
     } catch (error: any) {
       console.error("Error handling submit:", error);
     }
