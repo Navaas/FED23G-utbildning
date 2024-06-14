@@ -3,12 +3,22 @@ describe("Test header and startpage", () => {
     cy.task("reseed");
   });
 
-  // Tester för att kolla att det finns en header-tag, title och icon för att skapa en ny post
-  it("Should have a header-tag, title and icon to create new post", () => {
+  // Tester för att kolla att det finns en header-tag.
+  it("Should have a header-tag", () => {
     cy.visit("/");
     cy.get("header").should("exist").should("be.visible"); // Kollar att det finns en header tag och att den är synlig
-    cy.get("span").contains("➕").click(); // Leta efter en knapp som innehåller texten "Spara" och klicka på den
-    cy.get("h1").contains("Insta-next").should("be.visible").should("exist"); // Leta efter en h1 som innehåller texten "Welcome to my Blog" och kolla att den är synlig och existerar
+  });
+
+  it("should find add new post icon and switch url", () => {
+    cy.visit("/");
+    // Kollar att ikonen är synlig och finns
+    cy.get("svg.size-10.cursor-pointer.text-blue-950")
+      .should("be.visible")
+      .should("exist");
+    // Klicka på ikonen
+    cy.get("svg.size-10.cursor-pointer.text-blue-950").click();
+    // Kolla att URL har ändrats efter klick
+    cy.url().should("include", "/NewPostPage");
   });
 
   it("Should display a post with image, title and content", () => {
