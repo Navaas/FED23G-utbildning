@@ -1,6 +1,6 @@
 describe("Test header and startpage", () => {
   beforeEach(() => {
-    cy.exec("npm run reset && npm run seed");
+    cy.task("reseed");
   });
 
   // Tester för att kolla att det finns en header-tag, title och icon för att skapa en ny post

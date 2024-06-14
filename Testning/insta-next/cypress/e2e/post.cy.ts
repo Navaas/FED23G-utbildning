@@ -1,6 +1,6 @@
 describe("Test to create new post", () => {
   beforeEach(() => {
-    cy.exec("npm run reset && npm run seed");
+    cy.task("reseed");
   });
 
   it("Should visit icon to add new post", () => {
