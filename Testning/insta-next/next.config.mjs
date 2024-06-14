@@ -6,6 +6,7 @@ const nextConfig = {
       "images.desenio.com",
       "plus.unsplash.com",
       "example.com",
+      "media.istockphoto.com",
     ], // Lägg till din domän här, utan "https://"
   },
 };
