@@ -30,7 +30,7 @@ function PostForm() {
   };
 
   return (
-    <div className="bg-stone-100 p-4 rounded-md w-1/3 drop-shadow-xl">
+    <div className="bg-stone-100 p-4 rounded-md w-full sm:w-1/3 drop-shadow-xl">
       <form
         className="w-full flex flex-col gap-2 "
         onSubmit={form.handleSubmit(handleSubmit)}
