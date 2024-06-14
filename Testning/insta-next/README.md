@@ -2,11 +2,12 @@
 
 ## Installation
 
-Börja med att installera alla paket med `npm install`. Sen behöver vi skapa databasen med `npm run push`
-Sist så behöver vi seeda lite innehåll med `npm run seed`
+Börja med att installera alla paket med `npm install`.
 
 ## Starta applikationen
 
+Sen behöver vi skapa databasen med `npm run push`
+Sist så behöver vi seeda lite innehåll med `npm run seed`
 För att starta applikationen kan du kalla på `npm run dev`
 
 ## Testning
