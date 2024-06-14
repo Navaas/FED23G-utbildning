@@ -5,19 +5,21 @@ describe("Test to create new post", () => {
 
   it("Should visit icon to add new post", () => {
     cy.visit("/");
-    cy.get("header").should("exist").should("be.visible"); // Kollar att det finns en header tag och att den är synlig
-    cy.get("span").contains("➕").click(); // Leta efter en knapp som innehåller texten "Spara" och klicka på den
+    // Kollar att ikonen är synlig och finns
+    cy.get("svg.size-10.cursor-pointer.text-blue-950")
+      .should("be.visible")
+      .should("exist");
   });
-  it("Should visit new url", () => {
+  it("should find add new post icon and switch url", () => {
     cy.visit("/");
-    cy.get("header").should("exist").should("be.visible");
-    cy.url().then((initialUrl) => {
-      cy.get("span").contains("➕").click();
-      // Vänta på att URL:en ska uppdateras
-      cy.wait(1000);
-      // Hämta den nya URL:en efter att knappen har klickats på
-      cy.url().should("not.eq", initialUrl);
-    });
+    // Kollar att ikonen är synlig och finns
+    cy.get("svg.size-10.cursor-pointer.text-blue-950")
+      .should("be.visible")
+      .should("exist");
+    // Klicka på ikonen
+    cy.get("svg.size-10.cursor-pointer.text-blue-950").click();
+    // Kolla att URL har ändrats efter klick
+    cy.url().should("include", "/NewPostPage");
   });
   it("Should create new post", () => {
     const newPost = {
