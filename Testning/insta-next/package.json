@@ -19,6 +19,8 @@
     "seed": "tsx prisma/seed/seed.ts"
   },
   "dependencies": {
+    "@fontsource/josefin-sans": "^5.0.20",
+    "@fontsource/karla": "^5.0.20",
     "@hookform/resolvers": "^3.6.0",
     "cross-env": "^7.0.3",
     "dotenv-cli": "^7.4.2",

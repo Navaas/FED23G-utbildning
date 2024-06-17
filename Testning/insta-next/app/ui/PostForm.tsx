@@ -1,5 +1,6 @@
 "use client";
 
+import "@fontsource/josefin-sans";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -29,12 +30,12 @@ function PostForm() {
   };
 
   return (
-    <div className="bg-blue-50 p-4 rounded-md w-full sm:w-1/3 m-4 drop-shadow-xl">
+    <div className="bg-blue-50 p-4 rounded-md w-full md:w-3/4 xl:w-1/2 m-4 drop-shadow-xl">
       <form
-        className="w-full flex flex-col gap-2 "
+        className="w-full flex flex-col gap-2 font-josefin"
         onSubmit={form.handleSubmit(handleSubmit)}
       >
-        <h2>Skapa nytt inlägg</h2>
+        <h1 className="text-xl">Skapa nytt inlägg</h1>
         <input
           {...form.register("title")}
           type="text"
@@ -48,7 +49,7 @@ function PostForm() {
         <input
           {...form.register("image")}
           type="text"
-          placeholder="Lägg till bild url.."
+          placeholder="Lägg till bildurl.."
           className="p-2 rounded-md"
         />
         {errors.image && (

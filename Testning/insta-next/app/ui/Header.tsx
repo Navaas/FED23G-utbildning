@@ -16,7 +16,7 @@ export default function Header() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-10 cursor-pointer text-blue-950"
+            className="size-12 cursor-pointer text-blue-950 m-6"
           >
             <path
               strokeLinecap="round"

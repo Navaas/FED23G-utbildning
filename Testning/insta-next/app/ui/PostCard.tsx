@@ -1,4 +1,5 @@
 import { db } from "@/prisma/db";
+import "@fontsource/josefin-sans";
 import Image from "next/image";
 import DeleteButton from "./DeleteButton";
 
@@ -8,11 +9,11 @@ async function PostCard() {
   });
 
   return (
-    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    <div className=" p-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
       {posts.map((post) => (
         <div
           key={post.id}
-          className="post-card bg-blue-50 text-black p-4 h-full w-full mx-auto drop-shadow-xl rounded-md"
+          className="post-card bg-blue-50 text-black p-4 h-full w-full mx-auto drop-shadow-xl rounded-md font-josefin"
         >
           <div className="relative w-full  h-96">
             <Image
