@@ -21,7 +21,7 @@ function DeleteButton({ id }: { id: string }) {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="delete size-6"
+        className="delete size-6 cursor-pointer"
         onClick={handleDelete}
       >
         <path
