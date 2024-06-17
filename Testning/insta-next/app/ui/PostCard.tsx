@@ -9,7 +9,7 @@ async function PostCard() {
   });
 
   return (
-    <div className=" p-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
+    <div className=" p-4 grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       {posts.map((post) => (
         <div
           key={post.id}
