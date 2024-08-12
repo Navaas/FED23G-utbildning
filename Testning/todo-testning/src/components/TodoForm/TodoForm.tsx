@@ -17,11 +17,11 @@ function TodoForm(props: Props) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="enter todo..."
+        placeholder="Skriv en sak.."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button>Save</button>
+      <button>Spara</button>
     </form>
   );
 }
