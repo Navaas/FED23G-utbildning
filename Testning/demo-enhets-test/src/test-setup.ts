@@ -1,0 +1,3 @@
+import "@testing-library/jest-dom/vitest";
+
+// Do other things before test run...
